@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Clasess.Choise
+namespace Assets.Scripts.Clasess
 {
     [Serializable]
-    public class ElementChoise
+    public class End
     {
         public int Id;
         public string Name;
-        public List<Parametrs> Result;
+        public string Description;
+        public List<Parametrs> Result = new List<Parametrs>();
     }
 }

@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Clasess.Choise
+namespace Assets.Scripts.Clasess.Profile
 {
     [Serializable]
-    public class Choise
+    public class Achievements
     {
         public int Id;
         public string Name;
-        public List<ElementChoise> Elements;
+        public string Description;
+        public string IconUrl;
     }
 }
