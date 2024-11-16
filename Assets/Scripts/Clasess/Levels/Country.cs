@@ -12,6 +12,8 @@ namespace Assets.Scripts.Clasess.Levels
         public int Id;
         public string Name;
         public string Description;
+        public string NameLeader;
+        public string UrlLeader;
         public List<Turn> Turns = new List<Turn>();
         public List<Parametrs> Parametrs = new List<Parametrs>();
     }

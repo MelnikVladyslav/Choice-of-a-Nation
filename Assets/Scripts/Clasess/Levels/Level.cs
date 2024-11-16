@@ -12,6 +12,7 @@ namespace Assets.Scripts.Clasess.Levels
         public int Id;
         public string Name;
         public string Description;
+        public int YearStart;
         public List<Country> CountriesOpen = new List<Country>();
     }
 }

@@ -11,6 +11,7 @@ namespace Assets.Scripts.Clasess
     {
         public int Id;
         public string Name;
+        public string Description;
         public int Value;
     }
 }
