@@ -11,6 +11,7 @@ namespace Assets.Scripts.Clasess
     {
         public int Id;
         public string Text;
+        public string TextEng;
         public string ImageUrl;
     }
 }

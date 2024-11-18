@@ -11,6 +11,7 @@ namespace Assets.Scripts.Clasess
     public class Turn
     {
         public int Id;
+        public int IdTextCur = 0;
         public List<Content> Contents = new List<Content>();
         public List<Choise> Choises = new List<Choise>();
         public End End;
