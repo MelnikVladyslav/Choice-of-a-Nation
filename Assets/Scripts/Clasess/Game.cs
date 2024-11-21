@@ -13,6 +13,7 @@ namespace Assets.Scripts.Clasess
     {
         public int Id;
         public Player PlayerData;
+        public int idLevCur;
         public List<Level> Levels = new List<Level>();
         public List<Achievements> Achievements = new List<Achievements>();
     }

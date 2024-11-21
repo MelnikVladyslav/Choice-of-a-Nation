@@ -23,6 +23,8 @@ namespace Assets.Scripts.GameScripts
         #endregion
 
         public Text textContent;
+        public GameObject panelChoises;
+
         int idText = 0;
         int idTurn = 0;
 
@@ -31,13 +33,25 @@ namespace Assets.Scripts.GameScripts
         {
             game = load.LoadPlayersInfo();
 
+            if (game.Levels[0].CountriesOpen[0].IdTurnCur != 0)
+            {
+                idTurn = game.Levels[0].CountriesOpen[0].IdTurnCur;
+
+                if (game.Levels[0].CountriesOpen[0].Turns[idTurn].IdTextCur != 0)
+                {
+                    idText = game.Levels[0].CountriesOpen[0].Turns[idTurn].IdTextCur;
+                }
+            }
+
+            PlayerPrefs.SetInt("EnterChoise", -1);
+
             pidtr.text = ((game.Levels[0].CountriesOpen[0].Parametrs[0].Value + game.Levels[0].CountriesOpen[0].Parametrs[1].Value + game.Levels[0].CountriesOpen[0].Parametrs[2].Value) / 3).ToString() + "%";
             stanArmy.text = game.Levels[0].CountriesOpen[0].Parametrs[3].Value.ToString() + "%";
             kazna.text = game.Levels[0].CountriesOpen[0].Parametrs[4].Value.ToString();
 
-            textContent.text = game.Levels[0].CountriesOpen[0].Turns[0].Contents[0].Text;
-            textContent.GetComponent<TextLanguage>().textUkr = game.Levels[0].CountriesOpen[0].Turns[0].Contents[0].Text;
-            textContent.GetComponent<TextLanguage>().textEng = game.Levels[0].CountriesOpen[0].Turns[0].Contents[0].TextEng;
+            textContent.text = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].Text;
+            textContent.GetComponent<TextLanguage>().textUkr = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].Text;
+            textContent.GetComponent<TextLanguage>().textEng = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].TextEng;
         }
 
         // Update is called once per frame
@@ -45,15 +59,57 @@ namespace Assets.Scripts.GameScripts
         {
             if (PlayerPrefs.GetString("WhoWin") != null || PlayerPrefs.GetString("WhoWin") != "")
             {
+                if (PlayerPrefs.GetString("WhoWin") == "our")
+                {
+                    idTurn += 1;
+                    idText = 0;
 
+                    textContent.text = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].Text;
+                    textContent.GetComponent<TextLanguage>().textUkr = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].Text;
+                    textContent.GetComponent<TextLanguage>().textEng = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].TextEng;
+                }
+                if (PlayerPrefs.GetString("WhoWin") == "enemy")
+                {
+                    PlayerPrefs.SetString("textLose", "На жаль ви програли, ваш вплив послабився. Цим скористалися вороги і опозиція, скинувши вас і захопивши владу.");
+                    PlayerPrefs.SetString("textEngLose", "На жаль ви програли, ваш вплив послабився. Цим скористалися вороги і опозиція, скинувши вас і захопивши владу.");
+                    SceneManager.LoadSceneAsync(3);
+                }
 
                 PlayerPrefs.SetString("WhoWin", "");
+            }
+
+            if (PlayerPrefs.GetInt("EnterChoise") != -1)
+            {
+                panelChoises.gameObject.SetActive(false);
+                for (int i = 0; i < game.Levels[0].CountriesOpen[0].Parametrs.Count; i++)
+                {
+                    Debug.Log(PlayerPrefs.GetInt("EnterChoise"));
+                    Debug.Log(PlayerPrefs.GetInt("Turn"));
+                    for (int j = 0; j < game.Levels[0].CountriesOpen[0].Turns[PlayerPrefs.GetInt("Turn")].Choises[0].Elements[PlayerPrefs.GetInt("EnterChoise")].Result.Count; j++)
+                    {
+                        if (game.Levels[0].CountriesOpen[0].Parametrs[i].Name == game.Levels[0].CountriesOpen[0].Turns[PlayerPrefs.GetInt("Turn")].Choises[0].Elements[PlayerPrefs.GetInt("EnterChoise")].Result[j].Name)
+                        {
+                            game.Levels[0].CountriesOpen[0].Parametrs[i].Value += game.Levels[0].CountriesOpen[0].Turns[PlayerPrefs.GetInt("Turn")].Choises[0].Elements[PlayerPrefs.GetInt("EnterChoise")].Result[j].Value;
+                        }
+                    }
+                }
+
+                pidtr.text = ((game.Levels[0].CountriesOpen[0].Parametrs[0].Value + game.Levels[0].CountriesOpen[0].Parametrs[1].Value + game.Levels[0].CountriesOpen[0].Parametrs[2].Value) / 3).ToString() + "%";
+                stanArmy.text = game.Levels[0].CountriesOpen[0].Parametrs[3].Value.ToString() + "%";
+                kazna.text = game.Levels[0].CountriesOpen[0].Parametrs[4].Value.ToString();
+                BackSave();
+                PlayerPrefs.SetInt("EnterChoise", -1);
             }
         }
 
         public void BackSave()
         {
             save.SavePlayers(game);
+        }
+
+        public void Back()
+        {
+            SceneManager.LoadSceneAsync(0);
         }
 
         public void NextText()
@@ -83,9 +139,17 @@ namespace Assets.Scripts.GameScripts
                     PlayerPrefs.SetInt("EnemyBoyDuh", game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[2].Value);
                     PlayerPrefs.SetInt("Level", 0);
                     PlayerPrefs.SetInt("Country", 0);
-                    PlayerPrefs.SetInt("Scene", 3);
+                    PlayerPrefs.SetInt("Scene", 4);
                     SceneManager.LoadSceneAsync(2);
                     BackSave();
+                }
+
+                if (game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].Choises.Count > 0)
+                {
+                    panelChoises.gameObject.SetActive(true);
+                    PlayerPrefs.SetInt("Level", 0);
+                    PlayerPrefs.SetInt("Country", 0);
+                    PlayerPrefs.SetInt("Turn", idTurn-1);
                 }
 
                 for (int i = 0; i < game.Levels[0].CountriesOpen[0].Parametrs.Count; i++)
@@ -94,7 +158,11 @@ namespace Assets.Scripts.GameScripts
                     {
                         if (game.Levels[0].CountriesOpen[0].Parametrs[i].Name == game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[j].Name)
                         {
-                            game.Levels[0].CountriesOpen[0].Parametrs[i].Value += (10 + (game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[j].Value / 100) * game.Levels[0].CountriesOpen[0].Parametrs[2].Value);
+                            if (game.Levels[0].CountriesOpen[0].Parametrs[i].Name == "Скарбниця")
+                            {
+                                game.Levels[0].CountriesOpen[0].Parametrs[i].Value += (10 + (game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[j].Value / 100) * game.Levels[0].CountriesOpen[0].Parametrs[2].Value);
+                            }
+                            game.Levels[0].CountriesOpen[0].Parametrs[i].Value += game.Levels[0].CountriesOpen[0].Turns[idTurn - 1].End.Result[j].Value;
                         }
                     }
                 }
@@ -108,6 +176,7 @@ namespace Assets.Scripts.GameScripts
             textContent.GetComponent<TextLanguage>().textUkr = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].Text;
             textContent.GetComponent<TextLanguage>().textEng = game.Levels[0].CountriesOpen[0].Turns[idTurn].Contents[idText].TextEng;
 
+            BackSave();
         }
     }
 }

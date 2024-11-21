@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Clasess;
+using Assets.Scripts.Clasess.Chois;
 using Assets.Scripts.Clasess.Levels;
 using Assets.Scripts.Clasess.Profile;
 using GameLogic.Functions.SaveLoad;
@@ -244,7 +245,7 @@ namespace Assets.Scripts.Initilization
                                             {
                                                 Id = 0,
                                                 Name = "Бій"
-                                            }, 
+                                            },
                                             new Parametrs()
                                             {
                                                 Id = 1,
@@ -279,6 +280,130 @@ namespace Assets.Scripts.Initilization
                                                 Name = "Скарбниця",
                                                 Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
                                                 Value = 83
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 2,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Великий княже Олегу!\r\n\r\nТвоя перемога над древлянами завершилася блискучим тріумфом. Іскоростень, головне місто древлян, впало перед твоєю військовою майстерністю і стратегією, а древляни визнали твою владу та схилили голову перед Києвом. Ця перемога стала ще однією славною сторінкою у твоїй кар’єрі володаря та завойовника.",
+                                            TextEng = "Great Prince Oleg!\r\n\r\nYour victory over the Drevlians ended in a brilliant triumph. Iskorosten, the main city of the Drevlians, fell before your military skill and strategy, and the Drevlians recognized your authority and bowed their heads to Kiev. This victory became another glorious page in your career as a ruler and conqueror."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Ти продемонстрував мудрість великого правителя, не знищивши місто дощенту, але наказавши залишити мешканців живими. Древляни присягнули на вірність тобі, зобов’язалися щорічно сплачувати данину Києву медом, хутром та іншими цінними товарами. Цей жест не лише підкорив їхню волю, але й забезпечив стабільність у регіоні.\r\n\r\nТвоя перемога над древлянами підняла твій авторитет серед інших племен, які тепер бачать тебе як володаря всієї Русі, здатного здолати будь-якого ворога. Здобич і данина збагатили скарбницю Києва, а нові воїни поповнили ряди твоєї дружини.",
+                                            TextEng = "You showed the wisdom of a great ruler, not destroying the city to the ground, but ordering to leave the inhabitants alive. The people of Drevlya swore allegiance to you, pledged to pay tribute to Kyiv annually with honey, fur and other valuable goods. This gesture not only conquered their will, but also ensured stability in the region.\r\n\r\nYour victory over the Drevlians raised your authority among other tribes, who now see you as the ruler of all of Russia, capable of defeating any enemy. Booty and tribute enriched the treasury of Kyiv, and new soldiers joined the ranks of your wife."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Перемога над древлянами принесла не лише територіальні та економічні вигоди, але й зміцнила військову міць Київської Русі. Підкорення цього племені дозволило тобі, великий княже Олегу, залучити місцевих ополченців і воїнів до складу своєї дружини. Багато древлянських чоловіків, які ще недавно тримали зброю проти тебе, тепер стали частиною твоїх військових сил. Це рішення було мудрим стратегічним кроком, оскільки ти не лише посилив армію, але й зменшив потенційну загрозу з боку повстань серед підкореного населення.",
+                                            TextEng = "The victory over the Drevlians brought not only territorial and economic benefits, but also strengthened the military power of Kyivan Rus. The subjugation of this tribe allowed you, Grand Duke Oleg, to attract local militiamen and warriors to the composition of your wife. Many Drevlyan men who until recently took up arms against you have now become part of your military forces. This decision was a wise strategic move, as you not only strengthened the army, but also reduced the potential threat of rebellions among the conquered population."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Кінець 883",
+                                        Description = "Ось і кінець 883 року, великий княже Олегу!\n\n Але неподаліік є ще одне плем'я котре є під впливом хозарів. Сіверяни, одне з потужних слов’янських племен, ще не визнали твоєї влади. Їхні землі розташовані на північному сході, вздовж приток Десни й Сейму, і мають стратегічне значення для зміцнення впливу Києва. Вони сплачують данину хозарам, і це неприйнятно для єдності Русі. Щоб підготуватися до походу проти них, ти маєш ретельно спланувати кожен крок.",
+                                        DescriptionEng = "This is the end of the year 883, Grand Duke Oleg!\n\n But nearby there is another tribe that is under the influence of the Khazars. The Severians, one of the powerful Slavic tribes, have not yet recognized your authority. Their lands are located in the northeast, along the tributaries of the Desna and Seim rivers, and are of strategic importance for strengthening Kyiv's influence. They pay tribute to the Khazars, and this is unacceptable for the unity of Russia. To prepare for the campaign against them, you have to carefully plan every step.",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 93
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість нашої армії",
+                                                Description = "",
+                                                Value = 1500
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 3,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Олегу Віщий, наша сила і влада потребують постійного зміцнення, і для цього нам потрібно мобілізувати всі наявні ресурси для наступного походу проти сіверян. Цей похід — не просто завоювання нових земель, але й необхідність продемонструвати решті слов’янських племен, що Київська Русь є незаперечним лідером на цих теренах. Для цього потрібно не лише покладатися на дружину, а й залучити місцеві сили, створити потужну армію, яка здатна подолати будь-який опір.",
+                                            TextEng = "Oleg Vishchy, our strength and power need constant strengthening, and for this we need to mobilize all available resources for the next campaign against the northerners. This campaign is not just the conquest of new lands, but also the need to demonstrate to the rest of the Slavic tribes that Kyivan Rus is the undisputed leader in these areas. For this, it is necessary not only to rely on the wife, but also to attract local forces, to create a powerful army capable of overcoming any resistance."
+                                        }
+                                    },
+                                    Choises = new List<Choise>
+                                    {
+                                        new Choise()
+                                        {
+                                            Id = 0,
+                                            Name = "Мобілізація",
+                                            Elements = new List<ElementChoise>
+                                            {
+                                                new ElementChoise()
+                                                {
+                                                    Id = 0,
+                                                    Name = "Мобілізувати населення",
+                                                    Result = new List<Parametrs>()
+                                                    {
+                                                        new Parametrs()
+                                                        {
+                                                            Id = 0,
+                                                            Name = "Кількість нашої армії",
+                                                            Description = "",
+                                                            Value = 11000
+                                                        },
+                                                        new Parametrs()
+                                                        {
+                                                            Id = 1,
+                                                            Name = "Підтримка народу",
+                                                            Description = parametrs[2].Description,
+                                                            Value = -10
+                                                        },
+                                                        new Parametrs()
+                                                        {
+                                                            Id = 2,
+                                                            Name = "Скарбниця",
+                                                            Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                            Value = -150
+                                                        },
+                                                    }
+                                                },
+                                                new ElementChoise()
+                                                {
+                                                    Id = 1,
+                                                    Name = "Не проводити мобілізацію"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Підготовка",
+                                        Description = "Олегу Віщий, твоя підготовка до походу завершена!\r\n\r\nТабори наповнені гомоном воїнів, які перевіряють зброю та спорядження. У кованих мечах блищить загартована сталь, стріли загострені й готові пронизати навіть найміцніший обладунок. Твої дружинники, досвідчені й загартовані в битвах, піднесені духом і готові до нових подвигів. Зібране ополчення з древлян і полян, хоча й менш досвідчене, та все ж сповнене рішучості підтримати свого князя. Коли настане світанок, твоя армія виступить у похід. Цей день стане початком нової сторінки в історії Київської Русі. Твоє військо, як непереможна хвиля, рушить уперед, аби зміцнити твою владу, об’єднати руські землі та принести Києву нові здобутки.",
+                                        DescriptionEng = "Oleg Vishchy, your preparations for the campaign are complete!\r\n\r\nThe camps are filled with the noise of soldiers checking weapons and equipment. Forged swords gleam with hardened steel, arrows sharpened and ready to pierce even the strongest armor. Your soldiers, experienced and hardened in battles, are high in spirit and ready for new exploits. The assembled militia from the Drevlians and Polyans, although less experienced, is still determined to support their prince. When dawn comes, your army will march. This day will be the beginning of a new page in the history of Kyivan Rus. Your army, like an invincible wave, is moving forward to strengthen your power, unite the Russian lands and bring new gains to Kyiv.",
+                                        Result = new List<Parametrs>()
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 33
                                             }
                                         }
                                     }

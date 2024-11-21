@@ -80,724 +80,729 @@ namespace Assets.Scripts.GameScripts
 
         public void ResultBattle()
         {
-            Toggle leftSelToggle = leftFlang.ActiveToggles().FirstOrDefault();
-            Toggle centerSelToggle = centerFlang.ActiveToggles().FirstOrDefault();
-            Toggle rightSelToggle = rightFlang.ActiveToggles().FirstOrDefault();
-
-            int lo = 1, co = 1, ro = 1;
-
-            switch (leftSelToggle.name)
-            {
-                case "Атака":
-                    lo = 0;
-                    break;
-                case "Захист":
-                    lo = 1;
-                    break;
-                case "Штурм":
-                    lo = 2;
-                    break;
-            }
-            switch (centerSelToggle.name)
-            {
-                case "Атака":
-                    co = 0;
-                    break;
-                case "Захист":
-                    co = 1;
-                    break;
-                case "Штурм":
-                    co = 2;
-                    break;
-            }
-            switch (rightSelToggle.name)
-            {
-                case "Атака":
-                    ro = 0;
-                    break;
-                case "Захист":
-                    ro = 1;
-                    break;
-                case "Штурм":
-                    ro = 2;
-                    break;
-            }
-
-            float ratio = (float)kilkOurArmy / ((float)kilkOurArmy + (float)kilkEnemyArmy);
-
-            #region Left flang
-
-            if (le == lo)
-            {
-                if (lo == 0)
-                {
-                    resultTxt.text = "Ваша атака зіштовхнулася із зустрічною атакою.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr = "Ваша атака зіштовхнулася із зустрічною атакою.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng = "Your attack collided with a counter attack.\n";
-
-                    int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                    int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                    float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                    float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                    orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                    orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                    boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    kilkOurArmy -= deathOur;
-                    kilkEnemyArmy -= deathEnemy;
-                }
-                if (lo == 1)
-                {
-                    resultTxt.text = "По обидві сторони зайняли оборону.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr = "По обидві сторони зайняли оборону.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng = "Both sides took up defense.\n";
-                }
-                if (lo == 2)
-                {
-                    resultTxt.text = "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr = "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng = "Your assault collided with a counter-assault.\n";
-
-                    int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                    int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                    float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                    float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                    orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                    orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                    boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    kilkOurArmy -= deathOur;
-                    kilkEnemyArmy -= deathEnemy;
-                }
-            }
-            if (le != lo)
-            {
-                if (lo == 0)
-                {
-                    if (le == 1)
-                    {
-                        resultTxt.text = "Ваша атака зіштовхнулася з підготовленою обороною.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr = "Ваша атака зіштовхнулася з підготовленою обороною.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng = "Your attack ran into a prepared defense.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * ratio) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (le == 2)
-                    {
-                        resultTxt.text = "Ворог готувався до штурму і не очікував вашої атаки.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог готувався до штурму і не очікував вашої атаки.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng = "The enemy was preparing for an assault and did not expect your attack.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-                if (lo == 1)
-                {
-                    if (le == 0)
-                    {
-                        resultTxt.text = "Ворог, що атакував зустрів нашу грізну оборону.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог, що атакував зустрів нашу грізну оборону.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng = "The attacking enemy met our formidable defense.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (le == 2)
-                    {
-                        resultTxt.text = "На ваші обороні позиції було здійснено спланований штурм.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr = "На ваші обороні позиції було здійснено спланований штурм.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng = "A planned assault was carried out on your defensive positions.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-                if (lo == 2)
-                {
-                    if (le == 0)
-                    {
-                        resultTxt.text = "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng = "The enemy is successfully attacking your troops who were preparing for an assault.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (le == 1)
-                    {
-                        resultTxt.text = "Ви вдало штурмуєте оборонні позиції ворога.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr = "Ви вдало штурмуєте оборонні позиції ворога.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng = "You successfully storm the defensive positions of the enemy.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-            }
-
-            #endregion
-
-            #region Center flang
-
-            if (ce == co)
-            {
-                if (co == 0)
-                {
-                    resultTxt.text += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng += "Your attack collided with a counter attack.\n";
-
-                    int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                    int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                    float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                    float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                    orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                    orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                    boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    kilkOurArmy -= deathOur;
-                    kilkEnemyArmy -= deathEnemy;
-                }
-                if (co == 1)
-                {
-                    resultTxt.text += "По обидві сторони зайняли оборону.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr += "По обидві сторони зайняли оборону.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng += "Both sides took up defense.\n";
-                }
-                if (co == 2)
-                {
-                    resultTxt.text += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng += "Your assault collided with a counter-assault.\n";
-
-                    int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                    int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                    float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                    float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                    orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                    orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                    boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    kilkOurArmy -= deathOur;
-                    kilkEnemyArmy -= deathEnemy;
-                }
-            }
-            if (ce != co)
-            {
-                if (co == 0)
-                {
-                    if (ce == 1)
-                    {
-                        resultTxt.text += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "Your attack ran into a prepared defense.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * ratio) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (ce == 2)
-                    {
-                        resultTxt.text += "Ворог готувався до штурму і не очікував вашої атаки.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог готувався до штурму і не очікував вашої атаки.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "The enemy was preparing for an assault and did not expect your attack.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-                if (co == 1)
-                {
-                    if (ce == 0)
-                    {
-                        resultTxt.text += "Ворог, що атакував зустрів нашу грізну оборону.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог, що атакував зустрів нашу грізну оборону.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "The attacking enemy met our formidable defense.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (ce == 2)
-                    {
-                        resultTxt.text += "На ваші обороні позиції було здійснено спланований штурм.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "На ваші обороні позиції було здійснено спланований штурм.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "A planned assault was carried out on your defensive positions.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-                if (co == 2)
-                {
-                    if (ce == 0)
-                    {
-                        resultTxt.text += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "The enemy is successfully attacking your troops who were preparing for an assault.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (ce == 1)
-                    {
-                        resultTxt.text += "Ви вдало штурмуєте оборонні позиції ворога.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ви вдало штурмуєте оборонні позиції ворога.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "You successfully storm the defensive positions of the enemy.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-            }
-
-            #endregion
-
-            #region Right flang
-
-            if (re == ro)
-            {
-                if (ro == 0)
-                {
-                    resultTxt.text += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng += "Your attack collided with a counter attack.\n";
-
-                    int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                    int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                    float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                    float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                    orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                    orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                    boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    kilkOurArmy -= deathOur;
-                    kilkEnemyArmy -= deathEnemy;
-                }
-                if (ro == 1)
-                {
-                    resultTxt.text += "По обидві сторони зайняли оборону.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr += "По обидві сторони зайняли оборону.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng += "Both sides took up defense.\n";
-                }
-                if (ro == 2)
-                {
-                    resultTxt.text += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
-                    resultTxt.GetComponent<TextLanguage>().textUkr += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
-                    resultTxt.GetComponent<TextLanguage>().textEng += "Your assault collided with a counter-assault.\n";
-
-                    int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                    int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                    float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                    float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                    orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                    orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                    boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                    kilkOurArmy -= deathOur;
-                    kilkEnemyArmy -= deathEnemy;
-                }
-            }
-            if (re != ro)
-            {
-                if (ro == 0)
-                {
-                    if (re == 1)
-                    {
-                        resultTxt.text += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "Your attack ran into a prepared defense.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * ratio) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (re == 2)
-                    {
-                        resultTxt.text += "Ворог готувався до штурму і не очікував вашої атаки.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог готувався до штурму і не очікував вашої атаки.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "The enemy was preparing for an assault and did not expect your attack.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-                if (ro == 1)
-                {
-                    if (re == 0)
-                    {
-                        resultTxt.text += "Ворог, що атакував зустрів нашу грізну оборону.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог, що атакував зустрів нашу грізну оборону.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "The attacking enemy met our formidable defense.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (re == 2)
-                    {
-                        resultTxt.text += "На ваші обороні позиції було здійснено спланований штурм.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "На ваші обороні позиції було здійснено спланований штурм.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "A planned assault was carried out on your defensive positions.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-                if (ro == 2)
-                {
-                    if (re == 0)
-                    {
-                        resultTxt.text += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "The enemy is successfully attacking your troops who were preparing for an assault.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                    if (re == 1)
-                    {
-                        resultTxt.text += "Ви вдало штурмуєте оборонні позиції ворога.\n";
-                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ви вдало штурмуєте оборонні позиції ворога.\n";
-                        resultTxt.GetComponent<TextLanguage>().textEng += "You successfully storm the defensive positions of the enemy.\n";
-
-                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
-                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
-
-                        kilkOurArmy -= deathOur;
-                        kilkEnemyArmy -= deathEnemy;
-
-                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
-                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
-
-                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
-                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
-
-                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
-                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
-                    }
-                }
-            }
-
-            #endregion
-
-            OurDataTxt.text = kilkOurArmy.ToString() + " бійців\n" + orgOurArmy.ToString() + "% організації\n" + boyDuhOurArmy.ToString() + "% бойового духу";
-            EnemyDataTxt.text = kilkEnemyArmy.ToString() + " бійців\n" + orgEnemyArmy.ToString() + "% організації\n" + boyDuhEnemyArmy.ToString() + "% бойового духу";
-            OurDataTxt.GetComponent<TextLanguage>().textUkr = kilkOurArmy.ToString() + " бійців\n" + orgOurArmy.ToString() + "% організації\n" + boyDuhOurArmy.ToString() + "% бойового духу";
-            EnemyDataTxt.GetComponent<TextLanguage>().textUkr = kilkEnemyArmy.ToString() + " бійців\n" + orgEnemyArmy.ToString() + "% організації\n" + boyDuhEnemyArmy.ToString() + "% бойового духу";
-            OurDataTxt.GetComponent<TextLanguage>().textEng = kilkOurArmy.ToString() + " soldiers\n" + orgOurArmy.ToString() + "% organizations\n" + boyDuhOurArmy.ToString() + "% fighting spirit";
-            EnemyDataTxt.GetComponent<TextLanguage>().textEng = kilkEnemyArmy.ToString() + " soldiers\n" + orgEnemyArmy.ToString() + "% organizations\n" + boyDuhEnemyArmy.ToString() + "% fighting spirit";
-
-            le = Random.Range(0, 2);
-            Debug.Log(le);
-            ce = Random.Range(0, 2);
-            Debug.Log(ce);
-            re = Random.Range(0, 2);
-            Debug.Log(re);
-
-            bool isEnd = false;
-            bool isOurWin = false;
-
-            if (orgEnemyArmy < 20 || boyDuhEnemyArmy < 20)
-            {
-                resultTxt.text = "Ворог поніс великі втрати і відступає.";
-                resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог поніс великі втрати і відступає.";
-                resultTxt.GetComponent<TextLanguage>().textEng = "The enemy has suffered heavy losses and is retreating.";
-                isEnd = true;
-                isOurWin = true;
-            }
-            if (orgOurArmy < 20 || boyDuhOurArmy < 20)
-            {
-                resultTxt.text = "Ми понесли великі втрати і відступаємо.";
-                resultTxt.GetComponent<TextLanguage>().textUkr = "Ми понесли великі втрати і відступаємо.";
-                resultTxt.GetComponent<TextLanguage>().textEng = "We have suffered heavy losses and are retreating.";
-                isEnd = true;
-                isOurWin = false;
-            }
-            if (kilkEnemyArmy <= 0)
-            {
-                resultTxt.text = "Ворожа армія повністю знищена.";
-                resultTxt.GetComponent<TextLanguage>().textUkr = "Ворожа армія повністю знищена.";
-                resultTxt.GetComponent<TextLanguage>().textEng = "The enemy army is completely destroyed.";
-                isEnd = true;
-                isOurWin = true;
-            }
-            if (kilkOurArmy <= 0)
-            {
-                resultTxt.text = "Наша армія повністю знищена.";
-                resultTxt.GetComponent<TextLanguage>().textUkr = "Наша армія повністю знищена.";
-                resultTxt.GetComponent<TextLanguage>().textEng = "The your army is completely destroyed.";
-                isEnd = true;
-                isOurWin = false;
-            }
-
             if (a == 1)
             {
-                SceneManager.LoadSceneAsync(PlayerPrefs.GetInt("Scene"));
-            }
+                SceneManager.LoadScene(PlayerPrefs.GetInt("Scene"));
 
-            if (isEnd)
+                a = 0;
+            }
+            else
             {
-                PlayerPrefs.SetString("OurLeader", "");
-                PlayerPrefs.SetString("EnemyLeader", "");
-                PlayerPrefs.SetInt("OurArmy", 0);
-                PlayerPrefs.SetInt("EnemyArmy", 0);
-                PlayerPrefs.SetInt("OurOrg", 0);
-                PlayerPrefs.SetInt("EnemyOrg", 0);
-                PlayerPrefs.SetInt("OurBoyDuh", 0);
-                PlayerPrefs.SetInt("EnemyBoyDuh", 0);
 
-                Game game = load.LoadPlayersInfo();
-                if (game != null)
+                Toggle leftSelToggle = leftFlang.ActiveToggles().FirstOrDefault();
+                Toggle centerSelToggle = centerFlang.ActiveToggles().FirstOrDefault();
+                Toggle rightSelToggle = rightFlang.ActiveToggles().FirstOrDefault();
+
+                int lo = 1, co = 1, ro = 1;
+
+                switch (leftSelToggle.name)
                 {
-                    int idLev = PlayerPrefs.GetInt("Level");
-                    int idCount = PlayerPrefs.GetInt("Country");
-
-                    game.Levels[idLev].CountriesOpen[idCount].Parametrs[5].Value = kilkOurArmy;
-                    game.Levels[idLev].CountriesOpen[idCount].Parametrs[4].Value += 50;
+                    case "Атака":
+                        lo = 0;
+                        break;
+                    case "Захист":
+                        lo = 1;
+                        break;
+                    case "Штурм":
+                        lo = 2;
+                        break;
+                }
+                switch (centerSelToggle.name)
+                {
+                    case "Атака":
+                        co = 0;
+                        break;
+                    case "Захист":
+                        co = 1;
+                        break;
+                    case "Штурм":
+                        co = 2;
+                        break;
+                }
+                switch (rightSelToggle.name)
+                {
+                    case "Атака":
+                        ro = 0;
+                        break;
+                    case "Захист":
+                        ro = 1;
+                        break;
+                    case "Штурм":
+                        ro = 2;
+                        break;
                 }
 
-                save.SavePlayers(game);
+                float ratio = (float)kilkOurArmy / ((float)kilkOurArmy + (float)kilkEnemyArmy);
 
-                if (isOurWin)
+                #region Left flang
+
+                if (le == lo)
                 {
-                    PlayerPrefs.SetString("WhoWin", "our");
+                    if (lo == 0)
+                    {
+                        resultTxt.text = "Ваша атака зіштовхнулася із зустрічною атакою.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr = "Ваша атака зіштовхнулася із зустрічною атакою.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng = "Your attack collided with a counter attack.\n";
+
+                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        kilkOurArmy -= deathOur;
+                        kilkEnemyArmy -= deathEnemy;
+                    }
+                    if (lo == 1)
+                    {
+                        resultTxt.text = "По обидві сторони зайняли оборону.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr = "По обидві сторони зайняли оборону.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng = "Both sides took up defense.\n";
+                    }
+                    if (lo == 2)
+                    {
+                        resultTxt.text = "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr = "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng = "Your assault collided with a counter-assault.\n";
+
+                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        kilkOurArmy -= deathOur;
+                        kilkEnemyArmy -= deathEnemy;
+                    }
                 }
-                if (!isOurWin)
+                if (le != lo)
                 {
-                    PlayerPrefs.SetString("WhoWin", "enemy");
+                    if (lo == 0)
+                    {
+                        if (le == 1)
+                        {
+                            resultTxt.text = "Ваша атака зіштовхнулася з підготовленою обороною.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr = "Ваша атака зіштовхнулася з підготовленою обороною.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng = "Your attack ran into a prepared defense.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * ratio) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (le == 2)
+                        {
+                            resultTxt.text = "Ворог готувався до штурму і не очікував вашої атаки.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог готувався до штурму і не очікував вашої атаки.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng = "The enemy was preparing for an assault and did not expect your attack.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                    if (lo == 1)
+                    {
+                        if (le == 0)
+                        {
+                            resultTxt.text = "Ворог, що атакував зустрів нашу грізну оборону.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог, що атакував зустрів нашу грізну оборону.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng = "The attacking enemy met our formidable defense.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (le == 2)
+                        {
+                            resultTxt.text = "На ваші обороні позиції було здійснено спланований штурм.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr = "На ваші обороні позиції було здійснено спланований штурм.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng = "A planned assault was carried out on your defensive positions.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                    if (lo == 2)
+                    {
+                        if (le == 0)
+                        {
+                            resultTxt.text = "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng = "The enemy is successfully attacking your troops who were preparing for an assault.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (le == 1)
+                        {
+                            resultTxt.text = "Ви вдало штурмуєте оборонні позиції ворога.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr = "Ви вдало штурмуєте оборонні позиції ворога.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng = "You successfully storm the defensive positions of the enemy.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
                 }
 
-                a++;
+                #endregion
+
+                #region Center flang
+
+                if (ce == co)
+                {
+                    if (co == 0)
+                    {
+                        resultTxt.text += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng += "Your attack collided with a counter attack.\n";
+
+                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        kilkOurArmy -= deathOur;
+                        kilkEnemyArmy -= deathEnemy;
+                    }
+                    if (co == 1)
+                    {
+                        resultTxt.text += "По обидві сторони зайняли оборону.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr += "По обидві сторони зайняли оборону.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng += "Both sides took up defense.\n";
+                    }
+                    if (co == 2)
+                    {
+                        resultTxt.text += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng += "Your assault collided with a counter-assault.\n";
+
+                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        kilkOurArmy -= deathOur;
+                        kilkEnemyArmy -= deathEnemy;
+                    }
+                }
+                if (ce != co)
+                {
+                    if (co == 0)
+                    {
+                        if (ce == 1)
+                        {
+                            resultTxt.text += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "Your attack ran into a prepared defense.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * ratio) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (ce == 2)
+                        {
+                            resultTxt.text += "Ворог готувався до штурму і не очікував вашої атаки.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог готувався до штурму і не очікував вашої атаки.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "The enemy was preparing for an assault and did not expect your attack.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                    if (co == 1)
+                    {
+                        if (ce == 0)
+                        {
+                            resultTxt.text += "Ворог, що атакував зустрів нашу грізну оборону.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог, що атакував зустрів нашу грізну оборону.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "The attacking enemy met our formidable defense.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (ce == 2)
+                        {
+                            resultTxt.text += "На ваші обороні позиції було здійснено спланований штурм.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "На ваші обороні позиції було здійснено спланований штурм.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "A planned assault was carried out on your defensive positions.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                    if (co == 2)
+                    {
+                        if (ce == 0)
+                        {
+                            resultTxt.text += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "The enemy is successfully attacking your troops who were preparing for an assault.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (ce == 1)
+                        {
+                            resultTxt.text += "Ви вдало штурмуєте оборонні позиції ворога.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ви вдало штурмуєте оборонні позиції ворога.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "You successfully storm the defensive positions of the enemy.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                }
+
+                #endregion
+
+                #region Right flang
+
+                if (re == ro)
+                {
+                    if (ro == 0)
+                    {
+                        resultTxt.text += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася із зустрічною атакою.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng += "Your attack collided with a counter attack.\n";
+
+                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        kilkOurArmy -= deathOur;
+                        kilkEnemyArmy -= deathEnemy;
+                    }
+                    if (ro == 1)
+                    {
+                        resultTxt.text += "По обидві сторони зайняли оборону.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr += "По обидві сторони зайняли оборону.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng += "Both sides took up defense.\n";
+                    }
+                    if (ro == 2)
+                    {
+                        resultTxt.text += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
+                        resultTxt.GetComponent<TextLanguage>().textUkr += "Ваш штурм зіштовхнувся із зустрічним штурмом.\n";
+                        resultTxt.GetComponent<TextLanguage>().textEng += "Your assault collided with a counter-assault.\n";
+
+                        int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                        int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                        float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                        float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                        orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                        orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                        boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                        kilkOurArmy -= deathOur;
+                        kilkEnemyArmy -= deathEnemy;
+                    }
+                }
+                if (re != ro)
+                {
+                    if (ro == 0)
+                    {
+                        if (re == 1)
+                        {
+                            resultTxt.text += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ваша атака зіштовхнулася з підготовленою обороною.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "Your attack ran into a prepared defense.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * ratio) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (re == 2)
+                        {
+                            resultTxt.text += "Ворог готувався до штурму і не очікував вашої атаки.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог готувався до штурму і не очікував вашої атаки.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "The enemy was preparing for an assault and did not expect your attack.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                    if (ro == 1)
+                    {
+                        if (re == 0)
+                        {
+                            resultTxt.text += "Ворог, що атакував зустрів нашу грізну оборону.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог, що атакував зустрів нашу грізну оборону.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "The attacking enemy met our formidable defense.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * ratio) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (re == 2)
+                        {
+                            resultTxt.text += "На ваші обороні позиції було здійснено спланований штурм.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "На ваші обороні позиції було здійснено спланований штурм.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "A planned assault was carried out on your defensive positions.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                    if (ro == 2)
+                    {
+                        if (re == 0)
+                        {
+                            resultTxt.text += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ворог вдало наступає на ваші війська котрі готувалися до штурму.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "The enemy is successfully attacking your troops who were preparing for an assault.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (2f * ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (1 - ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                        if (re == 1)
+                        {
+                            resultTxt.text += "Ви вдало штурмуєте оборонні позиції ворога.\n";
+                            resultTxt.GetComponent<TextLanguage>().textUkr += "Ви вдало штурмуєте оборонні позиції ворога.\n";
+                            resultTxt.GetComponent<TextLanguage>().textEng += "You successfully storm the defensive positions of the enemy.\n";
+
+                            int deathOur = Mathf.RoundToInt((kilkOurArmy * (1 - ratio)) / 2);
+                            int deathEnemy = Mathf.RoundToInt((kilkEnemyArmy * (2f * ratio)) / 2);
+
+                            kilkOurArmy -= deathOur;
+                            kilkEnemyArmy -= deathEnemy;
+
+                            float moraleLossOur = Mathf.Clamp(deathOur / (float)kilkOurArmy * 10f, 0f, 5f);
+                            float moraleLossEnemy = Mathf.Clamp(deathEnemy / (float)kilkEnemyArmy * 10f, 0f, 5f);
+
+                            orgOurArmy = (int)Mathf.Clamp(orgOurArmy - moraleLossOur, 0f, 100f);
+                            orgEnemyArmy = (int)Mathf.Clamp(orgEnemyArmy - moraleLossEnemy, 0f, 100f);
+
+                            boyDuhOurArmy = (int)Mathf.Clamp(boyDuhOurArmy - moraleLossOur, 0f, 100f);
+                            boyDuhEnemyArmy = (int)Mathf.Clamp(boyDuhEnemyArmy - moraleLossEnemy, 0f, 100f);
+                        }
+                    }
+                }
+
+                #endregion
+
+                OurDataTxt.text = kilkOurArmy.ToString() + " бійців\n" + orgOurArmy.ToString() + "% організації\n" + boyDuhOurArmy.ToString() + "% бойового духу";
+                EnemyDataTxt.text = kilkEnemyArmy.ToString() + " бійців\n" + orgEnemyArmy.ToString() + "% організації\n" + boyDuhEnemyArmy.ToString() + "% бойового духу";
+                OurDataTxt.GetComponent<TextLanguage>().textUkr = kilkOurArmy.ToString() + " бійців\n" + orgOurArmy.ToString() + "% організації\n" + boyDuhOurArmy.ToString() + "% бойового духу";
+                EnemyDataTxt.GetComponent<TextLanguage>().textUkr = kilkEnemyArmy.ToString() + " бійців\n" + orgEnemyArmy.ToString() + "% організації\n" + boyDuhEnemyArmy.ToString() + "% бойового духу";
+                OurDataTxt.GetComponent<TextLanguage>().textEng = kilkOurArmy.ToString() + " soldiers\n" + orgOurArmy.ToString() + "% organizations\n" + boyDuhOurArmy.ToString() + "% fighting spirit";
+                EnemyDataTxt.GetComponent<TextLanguage>().textEng = kilkEnemyArmy.ToString() + " soldiers\n" + orgEnemyArmy.ToString() + "% organizations\n" + boyDuhEnemyArmy.ToString() + "% fighting spirit";
+
+                le = Random.Range(0, 2);
+                Debug.Log(le);
+                ce = Random.Range(0, 2);
+                Debug.Log(ce);
+                re = Random.Range(0, 2);
+                Debug.Log(re);
+
+                bool isEnd = false;
+                bool isOurWin = false;
+
+                if (orgEnemyArmy < 20 || boyDuhEnemyArmy < 20)
+                {
+                    resultTxt.text = "Ворог поніс великі втрати і відступає.";
+                    resultTxt.GetComponent<TextLanguage>().textUkr = "Ворог поніс великі втрати і відступає.";
+                    resultTxt.GetComponent<TextLanguage>().textEng = "The enemy has suffered heavy losses and is retreating.";
+                    isEnd = true;
+                    isOurWin = true;
+                }
+                if (orgOurArmy < 20 || boyDuhOurArmy < 20)
+                {
+                    resultTxt.text = "Ми понесли великі втрати і відступаємо.";
+                    resultTxt.GetComponent<TextLanguage>().textUkr = "Ми понесли великі втрати і відступаємо.";
+                    resultTxt.GetComponent<TextLanguage>().textEng = "We have suffered heavy losses and are retreating.";
+                    isEnd = true;
+                    isOurWin = false;
+                }
+                if (kilkEnemyArmy <= 0)
+                {
+                    resultTxt.text = "Ворожа армія повністю знищена.";
+                    resultTxt.GetComponent<TextLanguage>().textUkr = "Ворожа армія повністю знищена.";
+                    resultTxt.GetComponent<TextLanguage>().textEng = "The enemy army is completely destroyed.";
+                    isEnd = true;
+                    isOurWin = true;
+                }
+                if (kilkOurArmy <= 0)
+                {
+                    resultTxt.text = "Наша армія повністю знищена.";
+                    resultTxt.GetComponent<TextLanguage>().textUkr = "Наша армія повністю знищена.";
+                    resultTxt.GetComponent<TextLanguage>().textEng = "The your army is completely destroyed.";
+                    isEnd = true;
+                    isOurWin = false;
+                }
+
+                if (isEnd)
+                {
+                    PlayerPrefs.SetString("OurLeader", "");
+                    PlayerPrefs.SetString("EnemyLeader", "");
+                    PlayerPrefs.SetInt("OurArmy", 0);
+                    PlayerPrefs.SetInt("EnemyArmy", 0);
+                    PlayerPrefs.SetInt("OurOrg", 0);
+                    PlayerPrefs.SetInt("EnemyOrg", 0);
+                    PlayerPrefs.SetInt("OurBoyDuh", 0);
+                    PlayerPrefs.SetInt("EnemyBoyDuh", 0);
+
+                    Game game = load.LoadPlayersInfo();
+                    if (game != null)
+                    {
+                        int idLev = PlayerPrefs.GetInt("Level");
+                        int idCount = PlayerPrefs.GetInt("Country");
+
+                        game.Levels[idLev].CountriesOpen[idCount].Parametrs[5].Value = kilkOurArmy;
+                        game.Levels[idLev].CountriesOpen[idCount].Parametrs[4].Value += 50;
+                    }
+
+                    save.SavePlayers(game);
+
+                    if (isOurWin)
+                    {
+                        PlayerPrefs.SetString("WhoWin", "our");
+                    }
+                    if (!isOurWin)
+                    {
+                        PlayerPrefs.SetString("WhoWin", "enemy");
+                    }
+
+                    a++;
+                }
+
+                ProvideEnemyPlansHintWithError(le, ce, re);
             }
-
-            ProvideEnemyPlansHintWithError(le, ce, re);
         }
 
         void ProvideEnemyPlansHintWithError(int le, int ce, int re)
