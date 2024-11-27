@@ -1229,6 +1229,37 @@ namespace Assets.Scripts.Initilization
                                 },
                                 new Turn()
                                 {
+                                    Id = 15,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Після славного правління Олега, Київська держава отримала нового правителя — князя Ігоря, сина Рюрика. Його правління стало новою сторінкою в історії Русі, сповненою як викликів, так і досягнень. На відміну від свого попередника, Ігор успадкував могутню, але складну державу, яка потребувала як сильної руки, так і розумної дипломатії.",
+                                            TextEng = "After the glorious reign of Oleg, the Kievan state received a new ruler - Prince Igor, the son of Rurik. His reign became a new page in the history of Rus, full of both challenges and achievements. Unlike his predecessor, Igor inherited a powerful but complex state that required both a strong hand and clever diplomacy."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "На початку свого правління Ігор зіткнувся з необхідністю зберегти єдність Русі, яку забезпечив Олег. Племена, що платили данину Києву, потребували постійного контролю, щоб уникнути бунтів і зрад. У той час на кордонах дедалі активніше діяли печеніги, які час від часу пробували свої сили у спробах атакувати. Ігор, хоча й не мав слави великого завойовника, показав себе майстром політичної гри: він посилював владу Києва не лише військовими походами, але й дипломатією.",
+                                            TextEng = "At the beginning of his reign, Igor was faced with the need to preserve the unity of Rus, which Oleg had secured. The tribes that paid tribute to Kiev needed constant control to avoid rebellions and betrayals. At that time, the Pechenegs were increasingly active on the borders, and from time to time they tried their hand at attacks. Igor, although he did not have the glory of a great conqueror, showed himself to be a master of the political game: he strengthened the power of Kiev not only through military campaigns, but also through diplomacy."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Період правління Ігоря був також відзначений кількома визначними походами. Особливого значення набули його експедиції на Візантію. Перший великий похід у 941 році закінчився невдачею: візантійський «грецький вогонь» знищив частину його флоту, і Русь змушена була відступити. Проте Ігор не здався. У 944 році він зібрав нові сили і знову рушив до Константинополя. Цього разу справа закінчилася дипломатично: між Києвом і Візантією було укладено новий договір, вигідний для обох сторін. Ігор показав, що навіть поразка може стати основою для нових досягнень.",
+                                            TextEng = "The period of Igor's reign was also marked by several notable campaigns. Of particular importance were his expeditions to Byzantium. The first major campaign in 941 ended in failure: Byzantine \"Greek fire\" destroyed part of his fleet, and Rus was forced to retreat. However, Igor did not give up. In 944, he gathered new forces and again set out for Constantinople. This time the matter ended diplomatically: a new treaty was concluded between Kiev and Byzantium, beneficial to both sides. Igor showed that even defeat can become the basis for new achievements."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Description = "Однак найбільшим викликом для Ігоря стала внутрішня політика. Його спроба збільшити данину з древлян у 945 році обернулася трагедією. Старійшини древлян, розлючені надмірними поборами, підняли повстання, яке завершилося смертю князя. Цей момент став переломним для Русі, а його наслідки — поштовхом для радикальних реформ, які згодом провела княгиня Ольга.",
+                                        DescriptionEng = "However, Igor’s greatest challenge was domestic politics. His attempt to increase tribute from the Drevlyans in 945 ended in tragedy. The Drevlyan elders, angered by the excessive levies, revolted, resulting in the prince’s death. This moment was a turning point for Rus’, and its consequences were the impetus for the radical reforms later carried out by Princess Olga."
+                                    }
+                                },
+                                new Turn()
+                                {
 
                                 }
                             }
