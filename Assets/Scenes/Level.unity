@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choisePr: {fileID: 4205650343279715933, guid: 9bd6418494ecdad4ea0ab17b7f67dddd, type: 3}
   contentPar: {fileID: 1044379803}
+  panelChoise: {fileID: 1028365617}
   nameChoises: {fileID: 1410042047}
 --- !u!1 &183169782
 GameObject:

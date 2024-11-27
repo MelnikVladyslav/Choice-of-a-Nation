@@ -1158,6 +1158,7 @@ MonoBehaviour:
   texturesLeaders:
   - {fileID: 2800000, guid: 190484fcc0e87ff40a2e396e03db3176, type: 3}
   - {fileID: 2800000, guid: bb0dbaf541f560a41995fe277bee7048, type: 3}
+  - {fileID: 2800000, guid: 6b5aa7571e651304b811746e26b55911, type: 3}
   OurLeadImg: {fileID: 2074867122}
   EnemyLeadImg: {fileID: 1797923540}
   OurDataTxt: {fileID: 748989487}

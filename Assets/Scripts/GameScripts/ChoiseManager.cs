@@ -15,9 +15,11 @@ namespace Assets.Scripts.GameScripts
 
         Game game = new Game();
         bool isOpen = false;
+        bool isPer = false;
 
         public GameObject choisePr;
         public GameObject contentPar;
+        public GameObject panelChoise;
 
         public Text nameChoises;
         Text choise;
@@ -38,6 +40,15 @@ namespace Assets.Scripts.GameScripts
         // Update is called once per frame
         void Update()
         {
+            if (panelChoise.gameObject.active == true && isPer != true)
+            {
+                isOpen = true;
+                isPer = true;
+                game = load.LoadStartInfo();
+                idLev = PlayerPrefs.GetInt("Level");
+                idCoun = PlayerPrefs.GetInt("Country");
+                idTurn = PlayerPrefs.GetInt("Turn");
+            }
             if (isOpen)
             {
                 idLev = PlayerPrefs.GetInt("Level");
