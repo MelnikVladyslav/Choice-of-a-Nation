@@ -1260,7 +1260,64 @@ namespace Assets.Scripts.Initilization
                                 },
                                 new Turn()
                                 {
+                                    Id = 16,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Період правління Ольги, вдови Ігоря, став однією з найбільш визначних етапів в історії Київської Русі. Її правління виявилося не лише відновленням стабільності після трагічної смерті її чоловіка, але й періодом значних змін у внутрішній та зовнішній політиці держави.",
+                                            TextEng = "The reign of Olga, Igor's widow, was one of the most significant periods in the history of Kievan Rus'. Her reign was not only a restoration of stability after the tragic death of her husband, but also a period of significant changes in the state's domestic and foreign policy."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Після смерті Ігоря Ольга стала регенткою при малолітньому синові Святославі. Хоча її роль початково обмежувалася функціями опіки, Ольга швидко продемонструвала свою рішучість і здатність до владарювання. Вона відразу ж зіткнулася з наслідками повстання древлян, що стало причиною загибелі її чоловіка. Ольга вирішила не пробачити їм цього і застосувала жорстокі репресії. Літописи описують її помсту як безпрецедентну. Вона спочатку використала дипломатичні прийоми, щоб заманити представників древлян до Києва, де їх було вбито. Потім вона організувала жорстоку кару, заподіяну самому племені, що ще раз показало її здатність діяти безжально, коли це було необхідно для зміцнення влади.",
+                                            TextEng = "After Igor's death, Olga became regent for her young son Svyatoslav. Although her role was initially limited to guardianship, Olga quickly demonstrated her determination and ability to rule. She immediately faced the consequences of the Drevlyan uprising that had led to her husband's death. Olga decided not to forgive them and resorted to brutal repression. The chronicles describe her revenge as unprecedented. She first used diplomatic tactics to lure the Drevlyan representatives to Kiev, where they were killed. She then organized a brutal punishment inflicted on the tribe itself, which once again demonstrated her ability to act ruthlessly when necessary to consolidate power."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Однак, на відміну від жорстоких методів попередніх правителів, Ольга почала вводити нові адміністративні реформи. Однією з її основних заслуг було створення системи збору данини, яка замінила старі традиційні методи і забезпечила стабільний потік доходів у державну скарбницю. Ольга також упровадила нові міри для покращення адміністративного контролю на місцях, що дозволяло зменшити відцентрові сили та укріпити центр.",
+                                            TextEng = "However, in contrast to the brutal methods of previous rulers, Olga began to introduce new administrative reforms. One of her main achievements was the creation of a tribute collection system that replaced the old traditional methods and ensured a stable flow of revenue to the state treasury. Olga also introduced new measures to improve administrative control at the local level, which allowed for the reduction of centrifugal forces and the strengthening of the center."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Важливим етапом її правління стало встановлення дипломатичних відносин з Візантією. Ольга, прагнучи зміцнити міжнародний статус Русі, вирушила до Константинополя в 957 році, ставши однією з перших великих княгинь, що уклали договір з імператором. Візантія погодилася знизити податки для київських купців і навіть надала спеціальні привілеї для руських торговців. Цей візит до Візантії не лише підвищив статус Ольги на міжнародній арені, але й зміцнив зв’язки між Київською Руссю та могутньою імперією.",
+                                            TextEng = "An important stage of her reign was the establishment of diplomatic relations with Byzantium. Olga, seeking to strengthen the international status of Rus, went to Constantinople in 957, becoming one of the first grand duchesses to conclude an agreement with the emperor. Byzantium agreed to reduce taxes for Kievan merchants and even granted special privileges for Rus' traders. This visit to Byzantium not only increased Olga's status in the international arena, but also strengthened ties between Kievan Rus' and the powerful empire."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Також важливою подією стала християнізація Ольги. Хоча вона сама не прийняла християнство в той час, цей візит став початком духовної трансформації Київської Русі, яка під її владою все більше відкривалася для візантійської культури та релігії. Її дипломатичні зусилля в контексті християнства стали основою для пізнішого прийняття християнства Святославом та Володимиром.",
+                                            TextEng = "Another important event was Olga's Christianization. Although she herself did not convert to Christianity at the time, this visit marked the beginning of a spiritual transformation of Kievan Rus', which under her rule increasingly opened up to Byzantine culture and religion. Her diplomatic efforts in the context of Christianity became the basis for the later adoption of Christianity by Svyatoslav and Volodymyr."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Однак після того, як Святослав став дорослим і повністю взяв владу в свої руки, Ольга більше не могла залишатися при владі. Вона залишила за собою важливі духовні та політичні функції, але її пряме правління завершилося. Святослав, прагнучи до військових завоювань і більш прагматичних рішень, не підтримував матір у її прагненні зберігати стабільність через дипломатію і внутрішні реформи. Відтак, Ольга поступилася своїми владними повноваженнями на користь сина, хоча й залишалася почесною і важливою фігурою в історії Русі.",
+                                            TextEng = "However, after Svyatoslav became an adult and took full power into his own hands, Olga could no longer remain in power. She retained important spiritual and political functions, but her direct rule ended. Svyatoslav, striving for military conquests and more pragmatic decisions, did not support her mother in her desire to maintain stability through diplomacy and internal reforms. Therefore, Olga ceded her power to her son, although she remained an honorable and important figure in the history of Rus."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Ольга",
+                                        Description = "Правління Ольги залишило великий слід, оскільки вона стала однією з перших, хто продемонстрував прагнення до розбудови держави через зовнішню політику, мирні переговори та адміністративні реформи. Її діяльність заклала підвалини для подальшого розширення і розвитку Київської Русі за часів Святослава та Володимира.",
+                                        DescriptionEng = "Olga's reign left a great mark, as she was one of the first to demonstrate a commitment to state-building through foreign policy, peace negotiations, and administrative reforms. Her activities laid the foundation for the further expansion and development of Kyivan Rus' under Svyatoslav and Volodymyr."
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 17,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
 
+                                        }
+                                    }
                                 }
                             }
                         }
