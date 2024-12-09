@@ -987,7 +987,7 @@ namespace Assets.Scripts.Initilization
                                                             Id = 0,
                                                             Name = "Кількість нашої армії",
                                                             Description = "",
-                                                            Value = 12500
+                                                            Value = 6500
                                                         },
                                                         new Parametrs()
                                                         {
@@ -1009,7 +1009,7 @@ namespace Assets.Scripts.Initilization
                                                             Id = 0,
                                                             Name = "Кількість нашої армії",
                                                             Description = "",
-                                                            Value = 25000
+                                                            Value = 12500
                                                         },
                                                         new Parametrs()
                                                         {
@@ -1315,7 +1315,839 @@ namespace Assets.Scripts.Initilization
                                     {
                                         new Content()
                                         {
+                                            Id = 0,
+                                            Text = "Становлення Святослава Ігоровича як правителя Київської Русі ознаменувалося періодом масштабних військових кампаній, відновленням контролю над ключовими територіями та формуванням його іміджу як видатного полководця. Його молодість пройшла під опікою матері, княгині Ольги, яка керувала державою до досягнення Святославом повноліття. Саме в цей період формувалася його політична ідеологія, зосереджена на військовій експансії та збереженні незалежності Київської Русі.",
+                                            TextEng = "The rise of Svyatoslav Igorevich as the ruler of Kievan Rus was marked by a period of large-scale military campaigns, the restoration of control over key territories, and the formation of his image as an outstanding commander. His youth was spent under the care of his mother, Princess Olga, who ruled the state until Svyatoslav came of age. It was during this period that his political ideology was formed, focused on military expansion and preserving the independence of Kievan Rus."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Великий княже Святославе, перед нами стоїть завдання, яке несе честь і славу твоєму імені, але вимагає обережності й розрахунків. Землі в’ятичів, багаті лісами та річками, поки що перебувають під впливом хозар, тих, хто накладає свою руку на слов’янські племена і змушує їх платити данину. Чи це не образа для Києва? Ми не можемо дозволити, щоб наші брати залишалися під чужою владою, коли Русь має силу, щоб покласти цьому край.",
+                                            TextEng = "Grand Prince Svyatoslav, we are faced with a task that brings honor and glory to your name, but requires caution and calculation. The lands of the Vyatichi, rich in forests and rivers, are still under the influence of the Khazars, those who lay their hands on the Slavic tribes and force them to pay tribute. Is this not an insult to Kiev? We cannot allow our brothers to remain under foreign rule, when Russia has the power to put an end to this."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Підготовка до походу починається з аналізу. В’ятичі — це не ворог у прямому сенсі, але їхні землі є частиною тієї системи, що годує хозар. У нашій силі розірвати цей ланцюг і привернути їх до Києва, не як ворогів, а як братів, які визнають твою силу і мудрість. Ми маємо діяти так, щоб захопити їхню увагу і повагу, а не лише здобути перемогу зброєю.",
+                                            TextEng = "Preparation for the campaign begins with analysis. The Vyatichi are not an enemy in the literal sense, but their lands are part of the system that feeds the Khazars. It is in our power to break this chain and attract them to Kiev, not as enemies, but as brothers who recognize your strength and wisdom. We must act in such a way as to capture their attention and respect, and not just to win victory by arms."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Дружина готується до походу. Човни вже ладнають, бо річки поведуть нас до їхніх поселень. Залізо точиться, а серця воїнів розпалені. Ми несемо не лише меч, а й силу слова, силу впевненості в тому, що Київ є тим світлом, яке об’єднає всі слов’янські землі.\r\n\r\nПричина ясна: хозари вже занадто довго витискають данину з наших сусідів. Кожна монета, яку вони забирають, посилює їхні війська і послаблює наші. Вони панують у степах і тримають наш шлях до Каспійського моря. Але ми вже чуємо тріщину в їхній владі, і наш похід до в’ятичів — це перший удар по їхньому пануванню.",
+                                            TextEng = "The wife is preparing for the campaign. The boats are already getting ready, because the rivers will lead us to their settlements. The iron is sharpened, and the hearts of the warriors are inflamed. We carry not only the sword, but also the power of the word, the power of the confidence that Kyiv is the light that will unite all the Slavic lands.\r\n\r\nThe reason is clear: the Khazars have been squeezing tribute from our neighbors for too long. Every coin they take strengthens their troops and weakens ours. They rule the steppes and hold our path to the Caspian Sea. But we already feel a crack in their power, and our campaign to the Vyatichi is the first blow to their rule."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Це не лише війна за данину чи землі. Це крок до того, щоб усі слов’яни бачили: Київ — не лише центр торгівлі, а й центр сили. Княже, твоя рішучість має вести нас. Вогонь, що горить у твоїх очах, запалить серця твоїх воїнів. Ми візьмемо ці землі без зайвого кровопролиття, але із чітким сигналом усім: Русь — єдина, і лише Київ — її серце.",
+                                            TextEng = "This is not just a war for tribute or land. This is a step towards making all Slavs see: Kyiv is not only a center of trade, but also a center of power. Prince, your determination must guide us. The fire that burns in your eyes will ignite the hearts of your warriors. We will take these lands without unnecessary bloodshed, but with a clear signal to everyone: Rus is one, and only Kyiv is its heart."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Княже Святославе, наші люди готувалися до цього дня з великою напругою, але й з радісним нетерпінням. Настав час вирушати. Дружинники збираються на березі, де човни вже на воді, їхні весла готові розрізати холодні потоки річок. Мечі виблискують на сонці, а щити висять на бортах, немов обіцянка захисту і перемоги.",
+                                            TextEng = "Prince Svyatoslav, our people have been preparing for this day with great tension, but also with joyful impatience. The time has come to set out. The warriors are gathering on the shore, where the boats are already in the water, their oars ready to cut the cold streams of the rivers. Swords glitter in the sun, and shields hang on the sides, like a promise of protection and victory."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Перший етап нашого походу — спуститися вниз за течією Десни, звідти увійти до глибоких земель в’ятичів. Військовий порядок чітко встановлено: у передньому човні ти, княже, сам, а за тобою йдуть десятки, що тримають у собі міць Русі. На чолі кінних загонів, що супроводжують нас уздовж берегів, стоять твої найдосвідченіші воїни. Вони пильнують кожну місцевість, кожну стежку, щоб ворог не зміг застати нас зненацька.",
+                                            TextEng = "The first stage of our campaign is to descend downstream of the Desna River, from there to enter the deep lands of the Vyatichi. The military order is clearly established: in the front boat you, prince, are alone, and behind you are dozens who hold the power of Russia within themselves. At the head of the horse detachments that accompany us along the banks are your most experienced warriors. They guard every area, every path, so that the enemy cannot catch us by surprise."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Світанок приносить новий день, і з ним — наш рух. Люди на берегах кидають погляди на нашу армію, що пливе, наче жива ріка, готова знести все на своєму шляху. Веслярі гребуть у злагодженому ритмі, під вигуки ватажків. Їхня сила — не лише в руках, а й у вірі, що ми вирушаємо для великої справи.",
+                                            TextEng = "Dawn brings a new day, and with it our movement. People on the banks glance at our army, which flows like a living river, ready to sweep away everything in its path. The rowers row in a harmonious rhythm, to the shouts of their leaders. Their strength is not only in their hands, but also in the belief that we are setting out for a great cause."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Вода несе нас ближче до в’ятицьких поселень. Згодом відчуємо, чи зустрінуть вони нас із покорою, чи випробують нашу зброю. Але поки що тиша над водою, порушена лише шелестом весел і криками птахів. Наче сама природа затамувала подих перед нашою подорожжю.",
+                                            TextEng = "The water carries us closer to the Vyatka settlements. Later we will feel whether they will meet us with humility or test our weapons. But for now, the silence over the water is broken only by the rustle of oars and the cries of birds. It is as if nature itself has held its breath before our journey."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "Ти, княже, стоїш на носі свого човна, вдивляючись у далину. Твій погляд пильний, твоя рука впевнено тримає руків’я меча. Люди бачать тебе і знають, що за таким князем їм нема чого боятися. Із таким лідером Русь стає сильнішою з кожним днем, із кожною битвою, із кожним походом.",
+                                            TextEng = "You, prince, stand on the bow of your boat, peering into the distance. Your gaze is watchful, your hand confidently holds the hilt of your sword. People see you and know that behind such a prince they have nothing to fear. With such a leader, Russia becomes stronger with every day, with every battle, with every campaign."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 10,
+                                            Text = "Коли ми наблизилися до першого великого поселення в’ятичів, надійшли розвідники з повідомленням: місцеві не готові прийняти нашу владу без опору. Вони зібрали ополчення — кілька сотень досвідчених воїнів, загартованих життям у складних умовах, які готувалися зустріти нас у лісах. Їхній чисельності вистачило б, щоб створити проблему для необачного командира, але не для тебе, княже.",
+                                            TextEng = "As we approached the first large settlement of the Vyatichi, scouts arrived with a message: the locals were not ready to accept our power without resistance. They gathered a militia - several hundred experienced warriors, hardened by life in difficult conditions, who were preparing to meet us in the forests. Their numbers would be enough to create a problem for a reckless commander, but not for you, prince."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 11,
+                                            Text = "Твоя дружина, добре організована і дисциплінована, оточила поселення, не залишаючи шансів для втечі. Ти звернувся до в’ятичів із вимогою здатися й присягнути Києву. Сильний голос твоєї волі змусив багатьох вагатися. Проте їхні лідери вирішили випробувати нашу силу.\r\n\r\nПерша сутичка сталася на околиці лісу. Наші щитоносці зустріли стріли в’ятичів стіною, а потім, під твоїм наказом, розпочали організований наступ. Відвага і стратегія перемогли чисельність і знання місцевості. Вороги, побачивши, як падають їхні товариші, почали відступати.",
+                                            TextEng = "Your army, well organized and disciplined, surrounded the settlement, leaving no chance for escape. You turned to the Vyatichi with a demand to surrender and swear allegiance to Kiev. The strong voice of your will made many hesitate. However, their leaders decided to test our strength.\r\n\r\nThe first skirmish took place on the edge of the forest. Our shield-bearers met the Vyatichi arrows with a wall, and then, under your command, launched an organized attack. Courage and strategy defeated numbers and knowledge of the terrain. The enemies, seeing their comrades fall, began to retreat."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 12,
+                                            Text = "Княже, твоя міць і холодна рішучість у цей день вразили навіть ворогів. Коли основна битва була завершена, ти знову звернувся до в’ятичів. Цього разу твої слова були прийняті з покорою. В’ятицькі лідери вийшли зі своїх укріплень і схилили голови перед тобою, визнаючи твою владу.\r\n\r\nМирні переговори пройшли швидко. В’ятичі погодилися припинити данину хозарам і визнати себе частиною Київської держави. Ти залишив частину своєї дружини для нагляду й організації нових порядків, а сам вирушив далі, залишивши за собою не страх, а повагу.",
+                                            TextEng = "Prince, your strength and cold determination on that day amazed even your enemies. When the main battle was over, you again addressed the Vyatichi. This time your words were received with humility. The Vyatichi leaders came out of their fortifications and bowed their heads before you, recognizing your authority.\r\n\r\nPeace negotiations were swift. The Vyatichi agreed to stop paying tribute to the Khazars and recognize themselves as part of the Kievan state. You left part of your squad to supervise and organize new orders, and you yourself set off, leaving behind not fear, but respect."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Становлення Святослава",
+                                        Description = "Цей похід не лише розширив межі Русі, а й став сигналом для хозар: їхній вплив слабшає. Тепер перед нами відкриваються нові горизонти, і твої плани, княже, вже розгортаються в уяві, як наступний крок великого завоювання.",
+                                        DescriptionEng = "This campaign not only expanded the borders of Russia, but also became a signal to the Khazars: their influence is weakening. Now new horizons are opening before us, and your plans, prince, are already unfolding in the imagination, as the next step of the great conquest.",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 113
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 18,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Під вечір, коли сонце опускалося за обрій, в твоєму наметі панувала напружена тиша. Розвідники доповіли: печеніги готові до перемовин. Це були ті самі кочовики, чиї наскоки завдавали великих збитків сусідам. Їхня стрімка кіннота могла обернутися як проти Києва, так і на твою користь, Олегу. Але якою ціною?",
+                                            TextEng = "In the evening, as the sun sank below the horizon, a tense silence reigned in your tent. The scouts reported: the Pechenegs were ready for negotiations. These were the same nomads whose raids had caused great damage to their neighbors. Their swift cavalry could turn against Kyiv as well as in your favor, Oleg. But at what cost?"
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Перед тобою постав вибір. Мир із ними міг забезпечити спокій на східних кордонах, давши змогу зосередити всю увагу на хозарах. Проте чи можна довіряти тим, хто поважає лише силу? Їхня згода на ненапад може стати тимчасовим тріумфом, але чи не стане вона пасткою в майбутньому?",
+                                            TextEng = "You have a choice to make. Peace with them could bring peace to the eastern borders, allowing you to focus all your attention on the Khazars. But can you trust those who respect only strength? Their agreement to non-aggression may be a temporary triumph, but will it not become a trap in the future?"
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "З іншого боку, ти міг обрати інший шлях — не домовлятися, а діяти рішуче. Відкрита війна з печенігами показала б твою міць усім сусіднім племенам. Але чи варто було ризикувати, коли головна битва попереду, і твоїм справжнім ворогом залишається Хозарський каганат?",
+                                            TextEng = "On the other hand, you could have chosen another path - not to negotiate, but to act decisively. An open war with the Pechenegs would have shown your power to all neighboring tribes. But was it worth the risk when the main battle was ahead, and your real enemy remained the Khazar Khaganate?"
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "А ще був третій варіант: домовленість із болгарами, які прагнуть послабити хозар. Їхній торговий інтерес збігався з твоїм бажанням зміцнити економічну базу Києва. Вони могли стати надійними союзниками, але чи буде достатньо їхньої підтримки, якщо печеніги раптом змінять позицію?",
+                                            TextEng = "And there was a third option: an agreement with the Bulgarians, who sought to weaken the Khazars. Their commercial interest coincided with your desire to strengthen the economic base of Kiev. They could become reliable allies, but would their support be enough if the Pechenegs suddenly changed their position?"
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "У цей момент, великий княже, ти стояв перед вирішальним вибором. Важкі думки та холодний розрахунок супроводжували тебе, бо доля Києва залежала не лише від сили меча, а й від мудрості твоїх рішень.",
+                                            TextEng = "At this moment, great prince, you were faced with a crucial choice. Heavy thoughts and cold calculation accompanied you, because the fate of Kyiv depended not only on the power of the sword, but also on the wisdom of your decisions."
+                                        }
+                                    },
+                                    Choises = new List<Choise>()
+                                    {
+                                        new Choise()
+                                        {
+                                            Id = 0,
+                                            Name = "Дипломатія",
+                                            Elements = new List<ElementChoise>()
+                                            {
+                                                new ElementChoise()
+                                                {
+                                                    Id = 0,
+                                                    Name = "Мир із печенігами",
+                                                    Result = new List<Parametrs>()
+                                                    {
+                                                        new Parametrs()
+                                                        {
+                                                            Id = 0,
+                                                            Name = "Кількість нашої армії",
+                                                            Description = "",
+                                                            Value = 6500
+                                                        },
+                                                        new Parametrs()
+                                                        {
+                                                            Id = 0,
+                                                            Name = "Скарбниця",
+                                                            Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                            Value = -300
+                                                        }
+                                                    }
+                                                },
+                                                new ElementChoise()
+                                                {
+                                                    Id = 1,
+                                                    Name = "Домовленість із болгарами",
+                                                    Result = new List<Parametrs>()
+                                                    {
+                                                        new Parametrs()
+                                                        {
+                                                            Id = 0,
+                                                            Name = "Кількість нашої армії",
+                                                            Description = "",
+                                                            Value = 12500
+                                                        },
+                                                        new Parametrs()
+                                                        {
+                                                            Id = 0,
+                                                            Name = "Скарбниця",
+                                                            Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                            Value = -500
+                                                        }
+                                                    }
+                                                },
+                                                new ElementChoise()
+                                                {
+                                                    Id = 2,
+                                                    Name = "Ні з ким не домовлятися",
+                                                    Result = new List<Parametrs>()
+                                                    {
 
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "965",
+                                        Description = "Підготовка до перемовин завершувалася, і всі рішення, великокняже, тепер лежали на твоїх плечах. Посли печенігів, чи, можливо, болгари або інші союзники, вже чекали на твоє слово, вірячи у твою мудрість і силу. Ти стояв перед вибором, що міг визначити майбутнє не лише твого правління, а й самої Русі.\r\n\r\nЧоловіки у дружині готували свої обладунки, а радники шепотіли про важливість кожного слова на цих переговорах. Хтось радив обережність, аби не спровокувати нові конфлікти, інші ж закликали до рішучості, аби нав’язати умови, які б принесли найбільшу користь Києву.",
+                                        DescriptionEng = "The preparations for the negotiations were being completed, and all decisions, Grand Duke, now lay on your shoulders. The ambassadors of the Pechenegs, or perhaps the Bulgarians or other allies, were already waiting for your word, believing in your wisdom and strength. You were faced with a choice that could determine the future not only of your reign, but also of Rus' itself.\r\n\r\nThe men in the squad prepared their armor, and the advisors whispered about the importance of every word in these negotiations. Some advised caution so as not to provoke new conflicts, while others called for decisiveness in order to impose conditions that would bring the greatest benefit to Kiev.",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 20
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 19,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Княже Святославе, перед нами стоїть величезне завдання: ударити по серцю хозарської могутності, щоб раз і назавжди зруйнувати їхній вплив на наші землі. Це не просто війна за владу, це боротьба за майбутнє Русі, за свободу торгівлі та єдність наших земель. Успіх у цій кампанії залежить від ретельної підготовки, де кожна деталь має значення.",
+                                            TextEng = "Prince Svyatoslav, we face a huge task: to strike at the heart of the Khazar power in order to destroy their influence on our lands once and for all. This is not just a war for power, it is a struggle for the future of Rus, for freedom of trade and the unity of our lands. Success in this campaign depends on careful preparation, where every detail matters."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Ми зібрали дружину, загартовану в боях, але цього разу перед нами не лише численні вороги, але й складні умови походу. Хозарські землі лежать далеко, через дикі степи та непрохідні ліси. Важливо забезпечити постійне постачання провізії, води та зброї. Підготовка складів і баз уздовж маршруту — це ключ до нашого успіху.",
+                                            TextEng = "We have gathered a battle-hardened squad, but this time we face not only numerous enemies, but also difficult conditions for the campaign. The Khazar lands lie far away, across wild steppes and impenetrable forests. It is important to ensure a constant supply of provisions, water, and weapons. Preparing warehouses and bases along the route is the key to our success."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Кожен воїн, кожен кінь, кожна зброя має бути готова до тривалого походу. Майстри-ковалі день і ніч кують нові мечі та списи. Стрільці готують стріли, покриті міцними наконечниками, здатними пробивати ворожі обладунки. Дерев’яні щити зміцнені залізними обводами, аби витримати навіть найсильніший удар.",
+                                            TextEng = "Every warrior, every horse, every weapon must be ready for a long campaign. Master blacksmiths work day and night to forge new swords and spears. Archers prepare arrows covered with strong tips capable of piercing enemy armor. Wooden shields are reinforced with iron rims to withstand even the strongest blow."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Ми також відправили розвідників, щоб зібрати дані про місце розташування хозарських сил і стан їхніх фортець. Звістки повертаються тривожні: хозари хоч і ослаблені, але все ще зберігають міцні укріплення. Ітіль, їхня столиця, залишається головним центром їхньої влади, а Саркел — фортецею, яка контролює важливий шлях через Дон.",
+                                            TextEng = "We have also sent scouts to gather information on the location of the Khazar forces and the condition of their fortresses. The news is alarming: the Khazars, although weakened, still maintain strong fortifications. Itil, their capital, remains the main center of their power, and Sarkel is a fortress that controls the important route across the Don."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Підготовка",
+                                        Description = "Перед відходом ти, княже, скликав віче, щоб виголосити промову. Твої слова про необхідність звільнити Русь від хозарського гніту запалили серця воїнів. \"Іду на ви!\" — сказав ти, і це стало закликом до великого походу, який змінить долю нашої землі.",
+                                        DescriptionEng = "Before leaving, you, prince, convened a council to deliver a speech. Your words about the need to free Russia from Khazar oppression ignited the hearts of the soldiers. \"I'm coming for you!\" you said, and this became a call to a great campaign that would change the fate of our land.",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 20
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 20,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Перші дні походу були стрімкими. Дружина рухалася вниз по Дону, уникаючи засідок і залишаючи після себе шляхи постачання. Хозари, які звикли до тривалих прикордонних сутичок, не очікували такого злагодженого та стрімкого удару.",
+                                            TextEng = "The first days of the campaign were rapid. The army moved down the Don, avoiding ambushes and leaving supply routes behind. The Khazars, accustomed to prolonged border skirmishes, did not expect such a coordinated and rapid attack."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Княже, перед штурмом Саркела, ти і твої вірні радники ретельно обдумали кожен крок. Ворог мав численну перевагу за стінами, але ти добре розумів: це не лише битва за фортецю, а й за честь і владу Русі. У стінах твоєї ставки вирувала підготовка до вирішального удару.",
+                                            TextEng = "Prince, before the storming of Sarkel, you and your faithful advisors carefully considered every step. The enemy had a numerical advantage behind the walls, but you understood well: this was not only a battle for the fortress, but also for the honor and power of Russia. Within the walls of your headquarters, preparations for the decisive blow were raging."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Насамперед ти зібрав воєвод і розвідників, аби вислухати останні доповіді про розташування ворога та стан його оборони. Розвідники повідомили: Саркел добре укріплений, його стіни високі й товсті, але хозари не готові до довготривалої облоги, адже в їхніх запасах мало провіанту. Твій геній проявився в тому, що ти обрав штурм як швидкий і рішучий спосіб зламати їхній спротив.",
+                                            TextEng = "First of all, you gathered the voivode and scouts to listen to the latest reports on the enemy's location and the state of their defenses. The scouts reported: Sarkel is well fortified, its walls are high and thick, but the Khazars are not prepared for a long siege, as their supplies are few. Your genius was manifested in the fact that you chose an assault as a quick and decisive way to break their resistance."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Воїни дружно взялися за виготовлення осадних знарядь. У лісах, неподалік від фортеці, твої люди будували тарани, обшивали їх шкірою для захисту від вогню, майстрували штурмові сходи й укріплювали щити для стрільців. Серед твоїх дружинників кипіла робота, адже кожен розумів: від цих знарядь залежить доля бою.",
+                                            TextEng = "The warriors unitedly set about making siege weapons. In the forests near the fortress, your men built battering rams, sheathed them with leather to protect them from fire, crafted assault ladders, and fortified shields for the archers. Work was in full swing among your warriors, for everyone understood that the fate of the battle depended on these weapons."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Варягам, які славилися своєю відвагою, ти доручив вести передовий удар по головних воротах. Їхній досвід у битвах гарантував, що вони зламають перший рубіж ворога. Печенізькі вершники, твої тимчасові союзники, мали завдання блокувати будь-які спроби хозарських загонів вийти з фортеці чи отримати підкріплення. Ти також підготував слов’янські загони для підтримки основного штурму та захисту флангів.",
+                                            TextEng = "You tasked the Varangians, renowned for their courage, with leading the charge against the main gate. Their experience in battle guaranteed that they would break through the enemy’s first line. The Pecheneg horsemen, your temporary allies, were tasked with blocking any attempts by the Khazar troops to leave the fortress or to obtain reinforcements. You also prepared Slavic troops to support the main assault and protect the flanks."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Перед боєм ти сам обійшов своїх воїнів, звертаючись до них зі словами, які розпалювали їхній бойовий дух. Ти нагадував їм, що цей похід не лише за багатства, але й за славу Русі, за те, щоб знищити хозарське ярмо, яке гнітило слов’янські племена.",
+                                            TextEng = "Before the battle, you yourself went around your soldiers, addressing them with words that inflamed their fighting spirit. You reminded them that this campaign was not only for wealth, but also for the glory of Rus, to destroy the Khazar yoke that oppressed the Slavic tribes."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Твоя армія чекала світанку, затаївши подих. Воїни, закутані в хутра, грілися біля багать, востаннє перевіряли зброю й молилися своїм богам про перемогу. А ти, княже, стояв на чолі війська, готовий вести його до великої слави.",
+                                            TextEng = "Your army waited with bated breath for dawn. Warriors, wrapped in furs, warmed themselves by the fires, checking their weapons one last time and praying to their gods for victory. And you, prince, stood at the head of the army, ready to lead it to great glory."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Бій під Саркело",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Бій"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість ворожої армії",
+                                                Value = 5000
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 2,
+                                                Name = "Бойовий дух ворожої армії",
+                                                Value = 50
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 3,
+                                                Name = "Організація ворожої армії",
+                                                Value = 40
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 4,
+                                                Name = "Sviatoslav"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 5,
+                                                Name = "default"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 6,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 33
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 7,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = 10
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 21,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Княже Святославе, твоя перемога під Саркелом відкрила нову главу в історії цього великого походу. Після того як наші воїни подолали стіни фортеці, хозарський гарнізон був розбитий, а мешканці Саркела—підкорені. Ця твердиня, що довгий час служила ключовим пунктом оборони Хозарського каганату, тепер стала нашим оплотом. Русь затвердила свій контроль над важливим торговим і стратегічним вузлом.",
+                                            TextEng = "Prince Svyatoslav, your victory at Sarkel opened a new chapter in the history of this great campaign. After our warriors overcame the walls of the fortress, the Khazar garrison was defeated, and the inhabitants of Sarkel were subdued. This stronghold, which had long served as a key point of defense of the Khazar Khaganate, has now become our stronghold. Rus' has consolidated its control over an important trade and strategic hub."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Окрім захоплення фортеці, ти розпорядився зміцнити її оборону, адже це місце стане важливим опорним пунктом для подальших дій. Дружинники зайнялися підготовкою Саркела до зими: поповненням запасів, облаштуванням приміщень для військових і налагодженням комунікацій з навколишніми територіями.",
+                                            TextEng = "In addition to capturing the fortress, you ordered to strengthen its defenses, as this place would become an important stronghold for further actions. The Druzhinniki began preparing Sarkel for winter: replenishing supplies, arranging premises for the military, and establishing communications with the surrounding territories."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Місцеве населення — алани та інші підкорені племена, що залежали від хозарів, — визнало твою владу. Їм було запропоновано сплачувати данину Києву, замість колишніх хозарських правителів. Це не лише послабило економічний вплив хозар, а й підсилило твій авторитет серед сусідніх племен.",
+                                            TextEng = "The local population — the Alans and other conquered tribes dependent on the Khazars — recognized your authority. They were offered to pay tribute to Kiev, instead of the former Khazar rulers. This not only weakened the economic influence of the Khazars, but also strengthened your authority among neighboring tribes."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Новина про падіння Саркела швидко розійшлася по всій Хозарії, сіючи паніку серед їхніх залишкових військ і підвладних народів. Це був початок кінця для їхнього панування в регіоні. Однак, попереду тебе чекала складна кампанія, адже головний удар мав бути спрямований на столицю каганату — Ітіль. Але ти знав: розгром Хозарії — це не лише твоє завдання, а й обов’язок перед усім слов’янським світом.",
+                                            TextEng = "The news of Sarkel's fall quickly spread throughout Khazaria, sowing panic among their remaining troops and subject peoples. It was the beginning of the end for their rule in the region. However, a difficult campaign awaited you ahead, as the main blow was to be directed at the capital of the Khaganate - Itil. But you knew: the defeat of Khazaria was not only your task, but also a duty to the entire Slavic world."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Ти рушив на схід уздовж Волги, спрямовуючи свої сили до серця каганату — столиці Ітіль. Ця місія була ризикованою, адже ти перетинав землі, де хозари ще зберігали контроль, хоча і втрачали силу. Річкові судна, які привели твої воїни, давали перевагу у швидкості пересування та у забезпеченні військ.",
+                                            TextEng = "You marched east along the Volga River, directing your forces toward the heart of the Khaganate, the capital of Itil. This mission was risky, as you crossed lands where the Khazars still held sway, though their power was declining. The riverboats that your warriors brought with them gave them the advantage of speed and supply."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "У кожному місті, яке ти проходив, до тебе приєднувалися народи, які роками страждали під хозарським пануванням. Опір хозар ставав дедалі слабшим, адже їхня центральна влада не могла організувати ефективної оборони. Ворог втратив важливі ресурси, а падіння Саркела посіяло розбрат серед їхніх союзників.",
+                                            TextEng = "In each city you passed, you were joined by peoples who had suffered for years under Khazar rule. The Khazar resistance became weaker and weaker, as their central government could not organize an effective defense. The enemy lost important resources, and the fall of Sarkel sowed discord among their allies."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Княже, день, коли твої полки зійдуться з ворогом, вже наближається. Підготовка до битви — це не лише зброя і воїни, це стан душі і розуму. Ворожі укріплення Ітіля, багатство їхнього міста та впертість їхніх правителів ставлять перед нами нові виклики. Але ми маємо все, щоб здолати цей останній бастіон хозарської сили.",
+                                            TextEng = "Prince, the day when your regiments will meet the enemy is approaching. Preparation for battle is not only about weapons and warriors, it is a state of mind and soul. The hostile fortifications of Itil, the wealth of their city, and the stubbornness of their rulers pose new challenges. But we have everything to overcome this last bastion of Khazar power."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Спершу, ти наказав своїм розвідникам дослідити територію навколо Ітіля. Волга розливалася тут у десятки рукавів, створюючи складний лабіринт, але це також надавало можливості. Наші човни, створені на Дніпрі, здатні маневрувати у цих водах, дозволяючи нам атакувати з несподіваного напрямку. Розвідка принесла звістки про те, що хозари не змогли зібрати великих сил для оборони. Їхні найманці розбіглися, їхні союзники зрадили. Але це не причина для недооцінки — залишки їхньої армії ще можуть чинити опір.",
+                                            TextEng = "First, you ordered your scouts to explore the area around Itil. The Volga branched out into dozens of branches here, creating a complex labyrinth, but this also provided opportunities. Our boats, built on the Dnieper, are able to maneuver in these waters, allowing us to attack from an unexpected direction. The reconnaissance brought news that the Khazars were unable to gather large forces for defense. Their mercenaries had fled, their allies had betrayed. But this was no reason to underestimate - the remnants of their army could still resist."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Дружина готувалася наполегливо. Ладували зброю: сокири, списи, мечі. Лучники перевіряли тятиву, а ковалі зміцнювали залізо, яке стане щитом у бою. Ти особисто пройшов рядами своїх воїнів, вселяючи впевненість і нагадуючи кожному, що це не просто війна за багатства, а боротьба за свободу нашого народу від хозарського ярма.",
+                                            TextEng = "The wife prepared diligently. Weapons were being prepared: axes, spears, swords. Archers checked the bowstring, and blacksmiths strengthened the iron that would become a shield in battle. You personally walked through the ranks of your warriors, inspiring confidence and reminding everyone that this was not just a war for wealth, but a struggle for the freedom of our people from the Khazar yoke."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "Твої радники обговорювали тактику. Основною ідеєю була швидкість і раптовість удару. Якщо ми зможемо розбити ворога до того, як він організує оборону, Ітіль стане нашим. Було вирішено використати річкові маршрути, щоб уникнути довгого шляху сушею і напасти несподівано, з води.",
+                                            TextEng = "Your advisors discussed tactics. The main idea was speed and surprise of the attack. If we can defeat the enemy before he organizes a defense, Itil will be ours. It was decided to use the river routes to avoid the long journey overland and attack unexpectedly, from the water."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 10,
+                                            Text = "Коли настав час вирушати, твої полки були готові до великого випробування. Армія зібралася на березі, човни ледь витримували вагу озброєних чоловіків. У повітрі пахло напругою, але кожен знав: сьогодні ми пишемо історію. Твої слова, звернені до дружини, звучали впевнено і сильно:\r\n\r\n— Руські воїни, сьогодні ми зламаємо останній ланцюг, що стримував нашу волю. Ми здобудемо перемогу або впадемо з честю. Ідімо на ви!",
+                                            TextEng = "When the time came to set out, your regiments were ready for a great test. The army gathered on the shore, the boats could barely support the weight of armed men. The air smelled of tension, but everyone knew: today we are writing history. Your words, addressed to your wife, sounded confident and strong:\r\n\r\n— Ours warriors, today we will break the last chain that restrained our will. We will win or fall with honor. Let's go to you!"
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Ітіль",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Бій"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість ворожої армії",
+                                                Value = 7000
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 2,
+                                                Name = "Бойовий дух ворожої армії",
+                                                Value = 50
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 3,
+                                                Name = "Організація ворожої армії",
+                                                Value = 30
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 4,
+                                                Name = "Sviatoslav"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 5,
+                                                Name = "default"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 6,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 33
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 7,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = 10
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 22,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Княже, перемога під стінами Ітіля стала вирішальним кроком до занепаду Хозарського каганату. Після цього славного дня наші полки не затримувалися в зруйнованому місті надовго. Ітіль був спалений, і ті, хто залишився живими з його захисників, або присягнули на вірність, або втекли в степ, розповідаючи про нашу силу.",
+                                            TextEng = "Prince, the victory at the walls of Itil was a decisive step towards the decline of the Khazar Khaganate. After this glorious day, our regiments did not linger in the ruined city for long. Itil was burned, and those who remained alive from its defenders either swore allegiance or fled to the steppe, telling about our power."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Твоя армія, княже, поповнилася новими союзниками. Деякі з хозарських васалів — буртаси, болгари на Волзі, навіть частина аланів — бачили в тобі визволителя від хозарського панування. Вони згодилися платити данину Києву і приєднали свої сили до нашої дружини. Твої бойові загони стали ще більшими, що дозволяло планувати нові великі походи.",
+                                            TextEng = "Your army, prince, has been replenished with new allies. Some of the Khazar vassals - the Burtases, the Volga Bulgarians, even some of the Alans - saw in you a liberator from Khazar rule. They agreed to pay tribute to Kiev and joined their forces with our army. Your fighting units have become even larger, which allowed you to plan new major campaigns."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Здобич була чималою. Скрині, наповнені сріблом, тканинами й коштовностями, поповнили київські скарбниці. Але не багатства стали головною нагородою цього походу, а руйнування одного з найдавніших ворогів Русі. Хозарський каганат, колись могутній і жорстокий, був знищений як держава. В його місці залишилися лише розрізнені племена, що тепер боялися й згадували ім'я Святослава з тремтінням.",
+                                            TextEng = "The booty was considerable. Chests filled with silver, fabrics and jewels filled the Kiev treasuries. But it was not wealth that became the main reward of this campaign, but the destruction of one of the oldest enemies of Russia. The Khazar Khaganate, once powerful and cruel, was destroyed as a state. In its place remained only scattered tribes, who now feared and remembered the name of Svyatoslav with trembling."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Твій похід приніс також славу Києву. Тепер тебе, княже, знали далеко за межами наших земель — від степу до Кавказу, від Болгарії до Візантії. Але ти не зупинився. Звістки про нашу перемогу лише спонукали ворогів готуватися до зустрічі з нами. Ти знав, що боротьба за утвердження Русі в світі лише починається.\r\n\r\nЗ цієї перемоги розпочалася нова епоха, коли ми стали господарями у цих краях. Але дух твій, княже, вже звертав погляд на інший край, де багатства й ворожі полчища чекають на тебе.",
+                                            TextEng = "Your campaign also brought glory to Kiev. Now you, prince, were known far beyond our lands - from the steppe to the Caucasus, from Bulgaria to Byzantium. But you did not stop. The news of our victory only prompted the enemies to prepare to meet us. You knew that the struggle for the establishment of Rus in the world was only beginning.\r\n\r\nWith this victory, a new era began, when we became masters in these lands. But your spirit, prince, was already turning its gaze to another land, where riches and enemy hordes await you."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Княже, після знищення Хозарії ти не зупинився на досягнутому. Твої полки рушили далі на південь, у землі, де панували ясси та касоги. Ці народи були вірними союзниками Хозарського каганату й несли загрозу для нових завоювань Русі. Їхні землі — це ключ до Кавказу, багатого на шляхи та скарби. Без підкорення цих племен мир у наших нових володіннях залишався б недосяжним.",
+                                            TextEng = "Prince, after the destruction of Khazaria, you did not stop there. Your regiments moved further south, into the lands where the Yass and Kasogs ruled. These peoples were loyal allies of the Khazar Khaganate and posed a threat to new conquests by Russia. Their lands are the key to the Caucasus, rich in roads and treasures. Without the subjugation of these tribes, peace in our new possessions would remain unattainable."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Кожен крок твоєї армії супроводжувався грізним шепотом серед ворогів. Ясси, що заселяли рівнини та підгір’я, намагалися зібрати сили, щоб протистояти тобі. Але їхнє військо, звикле до сутичок у тісних ущелинах, не витримало удару дружини, яка йшла, наче буря степом. Здобувши кілька перемог, ти зламав їхній опір. Вони склали зброю й підкорилися, визнавши владу Києва.",
+                                            TextEng = "Every step of your army was accompanied by a menacing whisper among the enemies. The Iassi, who inhabited the plains and foothills, tried to gather strength to resist you. But their army, accustomed to battles in narrow gorges, could not withstand the blow of the squad, which was moving like a storm across the steppe. Having won several victories, you broke their resistance. They laid down their arms and submitted, recognizing the authority of Kiev."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Касоги, навчені досвідом своїх сусідів, спробували сховатися в гірських схилах, укріпивши свої селища. Але ти, княже, був безжальним. Своїми майстерними маневрами ти змусив їх вийти на бій. У запеклій битві касозька армія, хоч і численна, не змогла зрівнятися з твоїми дружинниками. Касоги втратили найкращих своїх воїнів, а їхні села стали частиною нашого володіння.",
+                                            TextEng = "The Kasogs, taught by the experience of their neighbors, tried to hide in the mountain slopes, fortifying their villages. But you, prince, were ruthless. With your skillful maneuvers you forced them to come out to fight. In a fierce battle, the Kasog army, although numerous, could not match your warriors. The Kasogs lost their best warriors, and their villages became part of our possessions."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Тмуторокань, важливий вузол торгівлі, тепер належить нам. Цей успіх ще більше посилив славу твого імені, княже. Усі торгові шляхи, що вели з Кавказу до Причорномор’я, стали нашими. Тепер навіть Візантія дивиться на нас із тривогою, розуміючи, що вплив Русі поширюється все далі. Ти змінив хід історії, встановивши панування Києва там, де ще вчора хазяйнували хозари.",
+                                            TextEng = "Tmutorokan, an important trading hub, now belongs to us. This success has further enhanced the glory of your name, prince. All the trade routes that led from the Caucasus to the Black Sea region have become ours. Now even Byzantium looks at us with anxiety, realizing that the influence of Russia is spreading further and further. You have changed the course of history, establishing the rule of Kiev where the Khazars ruled yesterday."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Княже Святославе, перед тим як ти звернув свій погляд на Балкани, світ навколо нас вже кипів інтригами й боротьбою. Перший виклик прийшов від Візантії, яка, занурена у внутрішні чвари, прагнула втримати контроль над Балканами. Болгарське царство, що довго трималося як могутня сила в регіоні, почало слабшати через конфлікти з сусідами і внутрішню нестабільність.",
+                                            TextEng = "Prince Svyatoslav, before you turned your gaze to the Balkans, the world around us was already seething with intrigue and struggle. The first challenge came from Byzantium, which, mired in internal strife, sought to maintain control over the Balkans. The Bulgarian kingdom, which had long held its own as a powerful force in the region, began to weaken due to conflicts with its neighbors and internal instability."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "Імператор Візантії Костянтин VII, побоюючись посилення Болгарії, шукав нового союзника. Твоя репутація, княже, вже сягнула Балкан, і візантійські посли з’явилися у твоєму дворі, пропонуючи золото й союзи. Їхня пропозиція була простою: ти допомагаєш зломити Болгарію, а вони відкривають для тебе нові шляхи торгівлі й визнають твою силу. Вони сподівалися, що це буде звичайний удар і ти, виконавши завдання, повернешся до Києва.",
+                                            TextEng = "The Byzantine Emperor Constantine VII, fearing the strengthening of Bulgaria, was looking for a new ally. Your reputation, prince, had already reached the Balkans, and Byzantine ambassadors appeared at your court, offering gold and alliances. Their offer was simple: you help break Bulgaria, and they open new trade routes for you and recognize your power. They hoped that this would be a normal blow and that you, having completed the task, would return to Kiev."
+                                        },
+                                        new Content()
+                                        { 
+                                            Id = 10,
+                                            Text = "Але, княже, ти бачив більше. Балкани — це земля, де зустрічаються великі торговельні шляхи, де багатства пливуть з Константинополя на північ. Ти знав: контроль над цими землями відкриє перед Руссю нові горизонти. Ти почув заклик Візантії, але відповів не заради їхніх інтересів, а заради величі Русі.",
+                                            TextEng = "But, prince, you have seen more. The Balkans are a land where great trade routes meet, where wealth flows from Constantinople to the north. You knew: control over these lands would open up new horizons for Rus. You heard the call of Byzantium, but you answered not for their interests, but for the greatness of Rus."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 11,
+                                            Text = "Княже Святославе, підготовка до походу на Балкани вимагала не лише зібрання воїнства, а й продуманої стратегії, яка забезпечила б твоєму війську швидкість і рішучість. Твої думки були зосереджені на тому, щоб кожен рух армії відображав силу Русі та її готовність диктувати свої умови на Балканах.",
+                                            TextEng = "Prince Svyatoslav, the preparation for the campaign in the Balkans required not only the gathering of troops, but also a well-thought-out strategy that would provide your army with speed and determination. Your thoughts were focused on ensuring that every movement of the army reflected the strength of Rus and its readiness to dictate its terms in the Balkans."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 12,
+                                            Text = "Ти почав із того, що скликав найкращих воїнів зі всієї землі Руської. Дружинники, обстріляні в боях із хозарами й касогами, готові були виступити за твоїм наказом. Союзні племена, що вже визнавали твою владу, вислали свої загони, зміцнивши твою армію різноманіттям та числом.",
+                                            TextEng = "You began by summoning the best warriors from all over the Russian land. The Druzhinniki, shelled in battles with the Khazars and Kasogs, were ready to act at your command. The allied tribes, who already recognized your authority, sent their detachments, strengthening your army with diversity and numbers."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 13,
+                                            Text = "Проте, лише сила не була достатньою. Ти подбав про забезпечення війська. З Києва, Чернігова та інших міст ішли каравани з харчами, зброєю та запасами для довгого походу. Торгівці, які прагнули вигоди, приєднувалися до твоїх сил, сподіваючись знайти нові ринки на Балканах.",
+                                            TextEng = "However, strength alone was not enough. You took care of the provision of the army. From Kyiv, Chernigov and other cities, caravans came with food, weapons and supplies for the long campaign. Merchants, eager for profit, joined your forces, hoping to find new markets in the Balkans."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 14,
+                                            Text = "Твоя флотилія, яка вже не раз доводила свою ефективність, готувалася перетнути Чорне море. Кораблі ремонтували, зміцнювали, оснащували баллістами та іншими облоговими знаряддями. Ти розумів, що битви будуть не лише на суші, а й у водах, де твої веслярі й лучники стануть ключовою силою.",
+                                            TextEng = "Your flotilla, which had already proven its effectiveness more than once, was preparing to cross the Black Sea. The ships were repaired, strengthened, equipped with ballistae and other siege weapons. You understood that the battles would be not only on land, but also in the waters, where your rowers and archers would become a key force."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 15,
+                                            Text = "Перед виступом ти зібрав раду старійшин і воєвод. Кожен з них отримав чіткі накази. Армія мала рухатися швидко, захоплюючи стратегічні пункти й залишаючи гарнізони для утримання здобутого. Усі знали: мета — не просто перемогти Болгарію, а поставити на коліна ті сили, що могли б кинути виклик Русі.",
+                                            TextEng = "Before the speech, you gathered a council of elders and a voivode. Each of them received clear orders. The army was to move quickly, capturing strategic points and leaving garrisons to hold what was gained. Everyone knew: the goal was not just to defeat Bulgaria, but to bring to its knees those forces that could challenge Rus."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Підготовка",
+                                        Description = "Підготовка завершувалася молитвами й жертвоприношеннями богам. Священники благословляли воїнів, а ти, Святославе, дивився на свою армію з упевненістю. Цей похід мав стати не лише випробуванням твоєї сили, а й початком нової ери для Русі.",
+                                        DescriptionEng = "The preparations were completed with prayers and sacrifices to the gods. The priests blessed the warriors, and you, Svyatoslav, looked at your army with confidence. This campaign was to be not only a test of your strength, but also the beginning of a new era for Rus.",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 20
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість нашої армії",
+                                                Description = "",
+                                                Value = 15000
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 23,
+                                    Contents = new List<Content>()
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Княже Святославе, початок походу став дзвоном, що прокотився всією Руссю, оголошуючи твої наміри підкорити Балкани. Весна принесла пробудження не лише землі, а й твоєї армії. Льоди Дніпра танули, звільняючи шлях для твоєї флотилії, а зелень степів відкривала простори для руху кінноти.",
+                                            TextEng = "Prince Svyatoslav, the beginning of the campaign became a bell that rang throughout Russia, announcing your intentions to conquer the Balkans. Spring brought the awakening not only of the land, but also of your army. The ice of the Dnieper melted, clearing the way for your flotilla, and the greenery of the steppes opened up spaces for the movement of cavalry."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Твоє військо, зібране в Києві, було наче живий організм: тисячі чоловіків, від старших дружинників до молодих новобранців, чекали твого сигналу до виступу. Бойові знамена піднімалися в небі, їхні кольори нагадували про твої перемоги над хозарами та іншими ворогами. Лучники перевіряли тятиви, а ковалі досі не випускали з рук молотів, готуючи останнє спорядження.",
+                                            TextEng = "Your army, gathered in Kyiv, was like a living organism: thousands of men, from senior warriors to young recruits, awaited your signal to advance. Battle banners rose in the sky, their colors a reminder of your victories over the Khazars and other enemies. Archers checked their bowstrings, and blacksmiths still held hammers in their hands, preparing the last equipment."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Ти, великий княже, виступив попереду своєї дружини, вітром пронісши через лави слова: \"Іду на ви!\". Ці слова, ніби блискавка, збудили в кожному воїні жагу до перемоги. Ти знав, що не лише фізична сила, а й дух твого війська приведе до успіху.",
+                                            TextEng = "You, the great prince, stepped forward in front of your wife, carrying the words through the ranks like the wind: \"I am coming for you!\". These words, like lightning, aroused in every warrior the thirst for victory. You knew that not only physical strength, but also the spirit of your army would lead to success."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Перше випробування — Чорне море. Твоя флотилія вирушила вниз Дніпром, несучи на собі не лише воїнів, а й надію на перемогу. На кожному судні — озброєні до зубів дружинники, готові зустріти ворога навіть серед хвиль. Веслярі злагоджено гнали кораблі вперед, підпорядковуючи свою силу твоєму плану.",
+                                            TextEng = "The first test is the Black Sea. Your flotilla set off down the Dnieper, carrying not only warriors but also the hope of victory. On each ship were warriors armed to the teeth, ready to meet the enemy even among the waves. The rowers drove the ships forward in unison, subordinating their strength to your plan."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Назустріч тобі тягнулася територія Болгарії — земля, багата й водночас ослаблена внутрішніми розбратами. Болгарські вартові, побачивши твої судна на горизонті, поспішали з вістями до своїх правителів, але в їхніх очах уже був страх. Твоє військо входило до нового етапу, де кожен рух мав визначати хід історії.",
+                                            TextEng = "The territory of Bulgaria stretched towards you - a land rich and at the same time weakened by internal strife. The Bulgarian sentries, seeing your ships on the horizon, hurried with news to their rulers, but there was already fear in their eyes. Your army was entering a new stage, where every move would determine the course of history."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Похід на Болгарію розгортався, як грандіозна драма, в якій кожен крок війська був викликом і тріумфом. Коли флотилія князя увійшла до вод Дунаю, болгарські землі вперше побачили руські знамена, що майоріли над хвилями. Святослав повів своє військо вперед, зустрічаючи невеликі загони противника, які намагалися перешкодити його просуванню. Вони були розбиті швидкими ударами, і шлях углиб Болгарії відкрився.",
+                                            TextEng = "The campaign against Bulgaria unfolded like a grand drama, in which every step of the army was a challenge and a triumph. When the prince's flotilla entered the waters of the Danube, the Bulgarian lands first saw the Russian banners fluttering above the waves. Svyatoslav led his army forward, meeting small enemy detachments that tried to hinder his advance. They were defeated by quick strikes, and the way deep into Bulgaria was opened."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Перед вирішальною битвою під Переяславцем було відчутно, як напруга висить у повітрі. Святослав, зібравши своїх радників, розгорнув перед ними карту місцевості. Ми детально розглядали кожен вигин річок, кожен пагорб і долину, знаючи, що навіть найменша деталь може стати вирішальною у бою. Святослав сидів у центрі, зосереджений і впевнений, його очі горіли пристрастю до перемоги.",
+                                            TextEng = "Before the decisive battle of Pereyaslavts, the tension was palpable. Sviatoslav, having gathered his advisers, unfolded a map of the area before them. We examined in detail every bend of the rivers, every hill and valley, knowing that even the smallest detail could be decisive in the battle. Sviatoslav sat in the center, focused and confident, his eyes burning with passion for victory."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Першим завданням було визначити слабкі місця болгарської армії. Ми отримали розвідувальні дані про їхнє розташування – височини навколо міста давали болгарам перевагу, але ми знали, що їхня оборона не ідеальна. Святослав ухвалив сміливе рішення: ударити не лише по центру, а й одночасно по флангах, що мало зламати бойовий порядок ворога.",
+                                            TextEng = "The first task was to identify the weak points of the Bulgarian army. We had received intelligence on their location - the heights around the city gave the Bulgarians an advantage, but we knew that their defenses were not perfect. Svyatoslav made a bold decision: to strike not only at the center, but also at the flanks at the same time, which was supposed to break the enemy's battle formation."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Військо готувалося до ночі. Лучники перевіряли тятиву, варяги точили сокири, а кіннотники намагалися привчити коней до нічних маневрів. Святослав відвідував кожен загін, розмовляючи з воїнами. Його слова надихали: він не приховував, що битва буде жорстокою, але кожен відчував, що князь вірить у перемогу.",
+                                            TextEng = "The army was preparing for the night. Archers checked their bowstrings, the Varangians sharpened their axes, and the cavalry tried to accustom their horses to night maneuvers. Svyatoslav visited each detachment, talking to the soldiers. His words were inspiring: he did not hide that the battle would be fierce, but everyone felt that the prince believed in victory."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "Під час останньої наради ми обговорили сигнали для початку атаки. Світло факелів мало вказувати на готовність обхідних загонів, а клич, що лунатиме долиною, стане сигналом для центрального удару. Святослав ще раз повторив: «Дисципліна – ось наш щит, а злагодженість – наш меч».",
+                                            TextEng = "During the last meeting, we discussed the signals for the start of the attack. The light of the torches was to indicate the readiness of the outflanking detachments, and the cry that would echo through the valley would be the signal for the central attack. Svyatoslav repeated once again: “Discipline is our shield, and harmony is our sword.”"
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Переяславець",
+                                        Description = "Перед світанком всі були на позиціях. Тиша перед боєм була майже нестерпною, але водночас давала відчуття єдності. Кожен знав свою роль, а погляди були спрямовані на князя, який стояв у передньому ряду, готовий особисто повести військо в атаку.",
+                                        DescriptionEng = "Before dawn, everyone was in position. The silence before battle was almost unbearable, but at the same time it gave a sense of unity. Everyone knew their role, and their eyes were fixed on the prince, who stood in the front row, ready to personally lead the army into the attack.",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Бій"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість ворожої армії",
+                                                Value = 30000
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 2,
+                                                Name = "Бойовий дух ворожої армії",
+                                                Value = 60
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 3,
+                                                Name = "Організація ворожої армії",
+                                                Value = 60
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 4,
+                                                Name = "Sviatoslav"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 5,
+                                                Name = "PetroI"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 6,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 33
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 7,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = 10
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 24,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Захопивши Переяславець, ти, Великий княже Святославе, заклав основу для панування над багатими землями Балкан. Але ця перемога, хоч і славна, принесла не лише здобутки, а й нові виклики, що вимагали твоєї рішучої руки.",
+                                            TextEng = "By capturing Pereyaslavts, you, Grand Duke Svyatoslav, laid the foundation for dominion over the rich lands of the Balkans. But this victory, although glorious, brought not only achievements, but also new challenges that required your decisive hand."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Місто стало твоїм новим форпостом, символом сили Київської Русі на Дунаї. Тут перепліталися багатства світу: із заходу йшло золото та вино, зі сходу — прянощі й шовк, із півночі — хутро та мечі. Але саме тут почали збурюватися ворожі течії, що могли стати на заваді твоїм великим задумам.",
+                                            TextEng = "The city became your new outpost, a symbol of the power of Kievan Rus on the Danube. The riches of the world intertwined here: from the west came gold and wine, from the east - spices and silk, from the north - furs and swords. But it was here that hostile currents began to stir, which could hinder your great plans."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Звідусіль посипалися звістки. Болгари, хоч і присягли на вірність, таємно плели інтриги. Візантія, не бажаючи миритися з втратою впливу, укладала союзи, готуючи пастки. А печеніги, підбурювані імператором Никифором, взялися облягати Київ, залишений без твоєї захисної десниці.",
+                                            TextEng = "News poured in from everywhere. The Bulgarians, although they swore allegiance, secretly plotted. Byzantium, unwilling to accept the loss of influence, concluded alliances, preparing traps. And the Pechenegs, incited by Emperor Nikephoros, began to besiege Kiev, left without your protective right."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Ти ухвалив мудре рішення: залишивши воєвод охороняти Переяславець, ти рушив на захист матері міст руських. Та навіть у відступі твої дії зміцнили нашу славу: ніде ворог не посмів з'явитися відкрито, усюди бачив лише залишки твоєї сили.",
+                                            TextEng = "You made a wise decision: leaving the voivode to guard Pereiaslavets, you set out to defend the mother of Russian cities. But even in retreat, your actions strengthened our glory: nowhere did the enemy dare to appear openly, everywhere he saw only the remnants of your strength."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Твоя відсутність дала ворогам на Балканах час на відновлення. Але навіть вони знають: твій меч, один раз піднятий, ніколи не падає без слави. І кожен день, що минає, лише наближає годину, коли ти знову вирушиш у бій, об'єднавши усі свої сили, щоб завершити те, що ти так велично розпочав.",
+                                            TextEng = "Your absence has given your enemies in the Balkans time to recover. But even they know: your sword, once raised, never falls without glory. And each passing day only brings closer the hour when you will once again go into battle, uniting all your forces to complete what you so grandly began."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Далі, великий княже, події загострилися на всіх фронтах. Після твого повернення до Києва, де ти встиг зняти облогу печенігів і укріпити столицю, залишені на Балканах землі почали втрачати стабільність. Переяславець, хоча й був взятий, не став спокійною базою: Візантія не могла змиритися із твоєю присутністю так близько до Константинополя.",
+                                            TextEng = "Then, Grand Duke, events escalated on all fronts. After your return to Kiev, where you managed to lift the siege of the Pechenegs and fortify the capital, the lands left in the Balkans began to lose stability. Pereyaslavts, although taken, did not become a peaceful base: Byzantium could not accept your presence so close to Constantinople."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Імператор Никифор II Фока почав готувати великий контрнаступ, підбурюючи місцеве населення до повстань і обіцяючи нагороди тим, хто виступить проти Русі. Болгари, які ще нещодавно складали присягу, почали задумувати зраду, сподіваючись відновити власну незалежність. Лише частина місцевої знаті лишалася вірною, бачачи в тобі визволителя від візантійського гніту.",
+                                            TextEng = "Emperor Nicephorus II Phocas began preparing a major counteroffensive, inciting the local population to revolt and promising rewards to those who would oppose Rus. The Bulgarians, who had recently sworn allegiance, began to plot treason, hoping to restore their own independence. Only a part of the local nobility remained loyal, seeing in you a liberator from Byzantine oppression."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Ти, Святославе, не став зволікати. Розуміючи, що довге панування на Балканах потребує ще більшої військової присутності та нових союзників, ти вирішив зібрати сили для нового походу. У цей час тобі надійшла звістка від болгарського царя Бориса II, який зазнав тиску від Візантії й шукав твого захисту.",
+                                            TextEng = "You, Svyatoslav, did not hesitate. Realizing that a long reign in the Balkans required an even greater military presence and new allies, you decided to gather forces for a new campaign. At this time, you received a message from the Bulgarian Tsar Boris II, who was under pressure from Byzantium and sought your protection."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "969",
+                                        Description = "Отже, далі був новий похід, у якому ти знову довів, що є одним із найсильніших правителів своєї доби. Це була епоха, коли кожен бій, кожна угода й кожна перемога вписували твоє ім'я золотими літерами в історію Київської Русі.",
+                                        DescriptionEng = "So, next was a new campaign, in which you once again proved that you were one of the strongest rulers of your time. It was an era when every battle, every agreement, and every victory inscribed your name in golden letters in the history of Kievan Rus.",
+                                        Result = new List<Parametrs>()
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Кількість нашої армії",
+                                                Description = "",
+                                                Value = 25000
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 10
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 25,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "",
+                                            TextEng = ""
                                         }
                                     }
                                 }
