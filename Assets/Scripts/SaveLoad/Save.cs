@@ -1,28 +1,22 @@
 ﻿using Assets.Scripts.Clasess;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace GameLogic.Functions.SaveLoad
 {
     public class Save
     {
-        public string folderPathInit = "Init";
-        public string urlStart = "Init/startGame.json";
+        private string folderPathInit => Path.Combine(Application.persistentDataPath, "Init");
+        private string urlStart => Path.Combine(folderPathInit, "startGame.json");
 
-        public string folderPathGame = "Game";
-        public string urlGame = "Game/players.json";
+        private string folderPathGame => Path.Combine(Application.persistentDataPath, "Game");
+        private string urlGame => Path.Combine(folderPathGame, "players.json");
 
         public void SaveStartGame(Game startGame)
         {
             // Перевірка наявності папки
             if (!Directory.Exists(folderPathInit))
             {
-                // Якщо папка не існує, створіть її
                 Directory.CreateDirectory(folderPathInit);
             }
 
@@ -31,6 +25,7 @@ namespace GameLogic.Functions.SaveLoad
 
             // Збереження у файл
             File.WriteAllText(urlStart, json);
+            Debug.Log($"Saved Start Game data at: {urlStart}");
         }
 
         public void SavePlayers(Game players)
@@ -38,7 +33,6 @@ namespace GameLogic.Functions.SaveLoad
             // Перевірка наявності папки
             if (!Directory.Exists(folderPathGame))
             {
-                // Якщо папка не існує, створіть її
                 Directory.CreateDirectory(folderPathGame);
             }
 
@@ -47,6 +41,7 @@ namespace GameLogic.Functions.SaveLoad
 
             // Збереження у файл
             File.WriteAllText(urlGame, json);
+            Debug.Log($"Saved Player data at: {urlGame}");
         }
     }
 }

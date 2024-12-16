@@ -2124,13 +2124,6 @@ namespace Assets.Scripts.Initilization
                                             new Parametrs()
                                             {
                                                 Id = 0,
-                                                Name = "Кількість нашої армії",
-                                                Description = "",
-                                                Value = 25000
-                                            },
-                                            new Parametrs()
-                                            {
-                                                Id = 0,
                                                 Name = "Скарбниця",
                                                 Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
                                                 Value = 10
@@ -2146,6 +2139,346 @@ namespace Assets.Scripts.Initilization
                                         new Content()
                                         {
                                             Id = 0,
+                                            Text = "Далі, великий княже, події загострилися на всіх фронтах. Після твого повернення до Києва, де ти встиг зняти облогу печенігів і укріпити столицю, залишені на Балканах землі почали втрачати стабільність. Переяславець, хоча й був взятий, не став спокійною базою: Візантія не могла змиритися із твоєю присутністю так близько до Константинополя.",
+                                            TextEng = "Then, Grand Duke, events escalated on all fronts. After your return to Kiev, where you managed to lift the siege of the Pechenegs and fortify the capital, the lands left in the Balkans began to lose stability. Pereyaslavts, although taken, did not become a peaceful base: Byzantium could not accept your presence so close to Constantinople."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Імператор Никифор II Фока почав готувати великий контрнаступ, підбурюючи місцеве населення до повстань і обіцяючи нагороди тим, хто виступить проти Русі. Болгари, які ще нещодавно складали присягу, почали задумувати зраду, сподіваючись відновити власну незалежність. Лише частина місцевої знаті лишалася вірною, бачачи в тобі визволителя від візантійського гніту.",
+                                            TextEng = "Emperor Nicephorus II Phocas began preparing a major counteroffensive, inciting the local population to revolt and promising rewards to those who would oppose Rus. The Bulgarians, who had recently sworn allegiance, began to plot treason, hoping to restore their own independence. Only a part of the local nobility remained loyal, seeing in you a liberator from Byzantine oppression."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Ти, Святославе, не став зволікати. Розуміючи, що довге панування на Балканах потребує ще більшої військової присутності та нових союзників, ти вирішив зібрати сили для нового походу. У цей час тобі надійшла звістка від болгарського царя Бориса II, який зазнав тиску від Візантії й шукав твого захисту.",
+                                            TextEng = "You, Svyatoslav, did not hesitate. Realizing that a long reign in the Balkans required an even greater military presence and new allies, you decided to gather forces for a new campaign. At this time, you received a message from the Bulgarian Tsar Boris II, who was under pressure from Byzantium and sought your protection."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Твій задум був простим, але сміливим: остаточно підкорити Балкани та створити сильну базу для тривалого панування Київської Русі в цьому регіоні. Але для цього потрібно було не лише військо, а й дипломатія. Твоїм планам заважали не лише зовнішні вороги, а й внутрішні труднощі — необхідність укріплення Києва та контролю над іншими землями, щоб забезпечити стабільність на Русі.",
+                                            TextEng = "Your plan was simple but bold: to finally conquer the Balkans and create a strong base for the long-term rule of Kievan Rus in this region. But this required not only the army, but also diplomacy. Your plans were hindered not only by external enemies, but also by internal difficulties - the need to strengthen Kiev and control other lands in order to ensure stability in Rus."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Підготовка до нового походу, великий княже, стала часом ретельного планування та мобілізації. Ворог був сильний, а ситуація хитка, тож кожен твій крок мав стати частиною величної стратегії.",
+                                            TextEng = "The preparations for the new campaign, Grand Duke, were a time of careful planning and mobilization. The enemy was strong and the situation was precarious, so your every move had to be part of a grand strategy."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Ти почав із перевірки стану війська. Дружина, загартована в боях на Балканах і в степах, вимагала поповнення, адже попередні кампанії залишили свої сліди. Було наказано зібрати найкращих воїнів із навколишніх земель: варягів, слов’янських ратників, а також найняти легких кінних лучників серед кочовиків. Їхнє вміння швидко маневрувати було необхідним для боротьби з візантійськими і болгарськими військами.",
+                                            TextEng = "You began by checking the condition of the army. The army, hardened in battles in the Balkans and the steppes, required replenishment, as previous campaigns had left their marks. It was ordered to gather the best warriors from the surrounding lands: Varangians, Slavic warriors, and also to recruit light horse archers from among the nomads. Their ability to quickly maneuver was necessary to fight the Byzantine and Bulgarian armies."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Поки йшло укріплення війська, ти особисто перевіряв стан човнів. Річковий флот — твоя головна зброя в кампаніях. Нові човни були легкими, швидкими і здатними долати як річкові, так і морські хвилі. У гирлах Дунаю та Дністра створювалися укріплені бази, що мали стати опорними пунктами для майбутньої кампанії.",
+                                            TextEng = "While the army was being strengthened, you personally checked the condition of the boats. The river fleet was your main weapon in the campaigns. The new boats were light, fast, and capable of overcoming both river and sea waves. Fortified bases were created at the mouths of the Danube and Dniester, which were to become strongholds for the upcoming campaign."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Дипломатія також не стояла осторонь. Посланці вирушили до печенігів і аланів, аби забезпечити мир на тилах і можливість отримання підкріплень у разі потреби. Ти знав, що збереження союзу з ними дозволить зосередитися на головному противнику — Візантії.",
+                                            TextEng = "Diplomacy was also not left out. Envoys went to the Pechenegs and Alans to ensure peace in the rear and the possibility of receiving reinforcements if necessary. You knew that maintaining an alliance with them would allow you to focus on your main enemy - Byzantium."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "У самій Русі ти посилив контроль, забезпечуючи безпеку Києва. Залишені гарнізони охороняли рубежі, щоб ворог не скористався твоєю відсутністю. До Києва було зібрано достатньо припасів, щоб забезпечити тривалу війну. Ти підготував усе для того, аби на Балканах Русь показала свою силу та витривалість.",
+                                            TextEng = "In Rus' itself, you strengthened control, ensuring the security of Kyiv. The garrisons left behind guarded the borders so that the enemy would not take advantage of your absence. Enough supplies were gathered in Kyiv to ensure a long war. You prepared everything so that Rus' could show its strength and endurance in the Balkans."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "969",
+                                        Description = "Коли все було готове, твої люди зібралися у великому таборі, очікуючи наказу вирушити. Ти стояв на високому пагорбі, дивлячись на своє військо, і розумів: цей похід вирішить долю не лише Балкан, а й престижу Київської Русі.",
+                                        DescriptionEng = "When everything was ready, your men gathered in a large camp, awaiting the order to set out. You stood on a high hill, looking down at your army, and understood: this campaign would decide the fate not only of the Balkans, but also of the prestige of Kievan Rus.",
+                                        Result = new List<Parametrs>()
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = -200
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість нашої армії",
+                                                Description = "",
+                                                Value = 25000
+                                            },
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 26,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Похід розпочався із впевненого руху на південь. Твоє військо, великий княже, залишило базу біля гирла Дністра і річковими шляхами вирушило вглиб балканських земель. Флот, побудований для швидких маневрів, легко подолав спокійні води Дунаю, оминаючи місцеві укріплення. Кожен човен був наповнений воїнами, які жадали нових перемог.",
+                                            TextEng = "The campaign began with a confident movement to the south. Your army, Grand Duke, left its base at the mouth of the Dniester and set off along the river routes deep into the Balkan lands. The fleet, built for quick maneuvers, easily crossed the calm waters of the Danube, bypassing local fortifications. Each boat was filled with warriors eager for new victories."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "На першому етапі походу військо зустріло незначний опір з боку болгарських гарнізонів, які були не готові до швидкого наступу. Твої варяги та слов'янські ратники штурмували декілька фортець, відкривши шлях углиб Болгарії. Хоругви Русі здіймалися на вежах переможених укріплень, а місцеві жителі вперше відчули силу Київської держави.",
+                                            TextEng = "At the first stage of the campaign, the army met with little resistance from the Bulgarian garrisons, who were not ready for a quick offensive. Your Varangians and Slavic warriors stormed several fortresses, opening the way deep into Bulgaria. The banners of Rus rose on the towers of the defeated fortifications, and the local residents first felt the power of the Kievan state."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Головною метою був підхід до столиці Болгарії — Преслава. У серці цієї кампанії твоє військо продемонструвало бездоганну організацію: передові загони розвідували місцевість, основні сили рухалися впорядковано, а тилові частини забезпечували безпеку комунікацій і транспорт із припасами.",
+                                            TextEng = "The main objective was to reach the Bulgarian capital, Preslav. At the heart of this campaign, your army demonstrated impeccable organization: advanced units scouted the terrain, the main forces moved in an orderly manner, and the rear units ensured the security of communications and the transport of supplies."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Великий княже, підготовка до битви за Преслав була випробуванням як для війська, так і для твоєї стратегії. Ти стояв перед серйозним завданням: зламати останній опір болгар, які сховалися за високими стінами столиці, захищаючи свої землі та честь.",
+                                            TextEng = "Grand Duke, the preparations for the Battle of Preslav were a test for both your army and your strategy. You faced a serious task: to break the last resistance of the Bulgarians, who had taken refuge behind the high walls of the capital, defending their lands and honor."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "На самому початку ти наказав провести детальну розвідку місцевості. Твої гінці та варязькі розвідники дослідили укріплення Преслава, шляхи до нього, джерела води й можливі пастки. Високі мури, добре захищені башти та чисельність болгарської армії були викликом, але не нездоланним.",
+                                            TextEng = "At the very beginning, you ordered a detailed reconnaissance of the area. Your messengers and Varangian scouts examined the fortifications of Preslav, the roads to it, the water sources and possible traps. The high walls, well-protected towers and the size of the Bulgarian army were a challenge, but not insurmountable."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Ти зібрав своє військо, до яких входили досвідчені дружинники, варяги й новоприєднані загони з підкорених земель. Зрозумівши, що облога може тривати довго, ти наказав організувати польові склади з продовольством і забезпечити стійкі постачання. Уся увага приділялася дисципліні та злагодженості дій.",
+                                            TextEng = "You gathered your army, which included experienced warriors, Varangians, and newly joined units from conquered lands. Realizing that the siege could last a long time, you ordered the organization of field warehouses with food and ensuring stable supplies. All attention was paid to discipline and coordination of actions."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "Особливу роль у підготовці відігравали твої майстри та інженери. Вони створили тарани, штурмові драбини й навіть катапульти, пристосовані для атаки на стіни Преслава. Одночасно було організовано тренування штурмових загонів, які готувалися до бою на вузьких вуличках і за стінами міста.",
+                                            TextEng = "Your craftsmen and engineers played a special role in the preparations. They created battering rams, assault ladders, and even catapults adapted for attacking the walls of Preslav. At the same time, training was organized for assault units, which were preparing for battle in the narrow streets and behind the city walls."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Твої полководці обговорювали можливі тактичні варіанти. Варяги наполягали на раптовій нічній атаці, тоді як слов'янські старійшини пропонували поступову облогу й виснаження ворога. Ти вирішив поєднати ці підходи: ударити з несподіваного боку, але водночас оточити місто, відрізавши його від постачання.",
+                                            TextEng = "Your commanders discussed possible tactical options. The Varangians insisted on a sudden night attack, while the Slavic elders suggested a gradual siege and exhaustion of the enemy. You decided to combine these approaches: strike from an unexpected direction, but at the same time surround the city, cutting it off from its supplies."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Перед боєм ти звернувся до своїх воїнів. У твоїх словах звучала впевненість і рішучість: перемога мала не лише принести багатства, а й зміцнити Русь як нову силу на Балканах. Воїни, натхненні твоїми промовами, вірили в успіх і були готові до битви, навіть якщо це вимагало найбільших жертв.",
+                                            TextEng = "Before the battle, you addressed your soldiers. Your words were filled with confidence and determination: victory would not only bring wealth, but also strengthen Russia as a new power in the Balkans. The soldiers, inspired by your speeches, believed in success and were ready for battle, even if it required the greatest sacrifices.v"
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "Підготовка завершилася, і твоє військо стало перед воротами Преслава. Болгари знали, що час для перемовин минув, і були готові до останнього бою. Відлуння битви за ці стіни ще довго розходитиметься Балканами, проголошуючи велич твого імені.",
+                                            TextEng = "The preparations were complete, and your army stood before the gates of Preslav. The Bulgarians knew that the time for negotiations was over, and they were ready for the final battle. The echoes of the battle for these walls will long echo through the Balkans, proclaiming the greatness of your name."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "Преслава",
+                                        Result = new List<Parametrs>
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Бій"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість ворожої армії",
+                                                Value = 20000
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 2,
+                                                Name = "Бойовий дух ворожої армії",
+                                                Value = 60
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 3,
+                                                Name = "Організація ворожої армії",
+                                                Value = 60
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 4,
+                                                Name = "Sviatoslav"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 5,
+                                                Name = "BorusII"
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 6,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = 33
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 7,
+                                                Name = "Підтримка народу",
+                                                Description = "Підтримка народу — це рівень задоволення та довіри, яку населення має до правлячої влади чи уряду. Цей параметр прямо впливає на економічні показники та прибутки держави, адже високий рівень підтримки народу стимулює продуктивність, сприяє стабільності і росту доходів від податків. Водночас низький рівень підтримки може призвести до соціальних заворушень, страйків або навіть повстань, що негативно позначиться на економічному розвитку та здатності ефективно управляти ресурсами. Підтримка народу залежить від таких факторів, як рівень життя, ефективність управлінських рішень, військові перемоги та культурна політика, а також від реакції на кризи та зовнішні загрози.",
+                                                Value = 10
+                                            }
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 27,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "Після битви за Преслав Святослав закріпив контроль над значною частиною Болгарії. Захоплення столиці мало далекосяжні наслідки, адже підкорення Преслава дало йому не лише військову перевагу, а й політичний контроль над багатою болгарською територією. Болгарський цар Борис II потрапив у залежність від київського князя, і Болгарія фактично стала підвладною Києву.",
+                                            TextEng = "After the Battle of Preslav, Svyatoslav consolidated control over a large part of Bulgaria. The capture of the capital had far-reaching consequences, as the conquest of Preslav gave him not only a military advantage, but also political control over the rich Bulgarian territory. The Bulgarian Tsar Boris II fell into dependence on the Kievan prince, and Bulgaria effectively became subject to Kiev."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Преслав перетворився на новий опорний пункт для подальшої експансії на Балкани. Святослав почав інтегрувати болгарські війська до свого війська, зміцнюючи власну армію перед можливими зіткненнями з Візантією. Ця перемога дала йому можливість укріпити свої позиції в регіоні, продовжуючи свій амбітний план створення Балканської імперії.",
+                                            TextEng = "Preslav became a new stronghold for further expansion into the Balkans. Svyatoslav began to integrate Bulgarian troops into his army, strengthening his own army for possible clashes with Byzantium. This victory gave him the opportunity to consolidate his position in the region, continuing his ambitious plan to create a Balkan empire."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Проте перемога принесла не лише славу, а й нові виклики. Візантія, яка уважно стежила за розвитком подій, почала готуватися до відпору. Для імперії було критично важливо не допустити, щоб Святослав утвердився на Балканах. Попереду чекали нові битви, і кожен крок на завойованій території вимагав обережності й стратегічного планування.",
+                                            TextEng = "However, the victory brought not only glory, but also new challenges. Byzantium, which was closely following the development of events, began to prepare for a counterattack. It was critically important for the empire to prevent Svyatoslav from establishing himself in the Balkans. New battles awaited, and every step in the conquered territory required caution and strategic planning."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "У самому Києві звістка про перемогу викликала радість, але й настороженість. Занадто велика увага до балканських справ викликала невдоволення серед слов'янських союзників і деяких бояр, які побоювалися послаблення впливу Русі на північних територіях. Тим часом у Болгарії Святослав почав укріплювати адміністративну систему, створюючи передумови для тривалого утримання влади.",
+                                            TextEng = "In Kiev itself, the news of the victory caused joy, but also caution. Too much attention to Balkan affairs caused discontent among Slavic allies and some boyars, who feared a weakening of Rus' influence in the northern territories. Meanwhile, in Bulgaria, Svyatoslav began to strengthen the administrative system, creating the prerequisites for a long-term hold on power."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Після захоплення Преслава та підкорення Болгарії Святославу довелося відновити сили й укріпити позиції перед новим викликом — Візантією, яка не могла змиритися з його присутністю на Балканах. Подальші події привели до початку великого протистояння між Руссю та Візантійською імперією.",
+                                            TextEng = "After the capture of Preslav and the conquest of Bulgaria, Svyatoslav had to regain his strength and strengthen his position before a new challenge - Byzantium, which could not accept his presence in the Balkans. Subsequent events led to the beginning of a major confrontation between Rus' and the Byzantine Empire."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
+                                            Text = "Святослав, продовжуючи інтегрувати болгарські ресурси, армію та території до свого впливу, зіткнувся із загрозою контрнаступу з боку імператора Іоанна Цимісхія. Візантійці розпочали ретельну підготовку до війни, залучаючи найманців, дипломатичні союзи й ресурси зі всіх куточків своєї імперії. Для Русі це означало загрозу втрати щойно завойованих територій та випробування на міцність Святославової армії.",
+                                            TextEng = "Svyatoslav, continuing to integrate Bulgarian resources, army, and territory into his sphere of influence, faced the threat of a counteroffensive from Emperor John Tzimiskes. The Byzantines began careful preparations for war, drawing in mercenaries, diplomatic alliances, and resources from all corners of their empire. For Rus', this meant the threat of losing newly conquered territories and a test of the strength of Svyatoslav's army."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 6,
+                                            Text = "У Болгарії князь організував управління й залишив свої гарнізони, щоб убезпечити завойовані землі. Паралельно з цим він почав готувати свій наступ на Візантію, який мав вирішити долю його амбіцій у регіоні. Але наступні події обіцяли бути складними: дві великі держави вступали в боротьбу, яка стане вирішальною для контролю над Балканами.",
+                                            TextEng = "In Bulgaria, the prince organized the administration and left his garrisons to secure the conquered lands. In parallel, he began to prepare his attack on Byzantium, which was to decide the fate of his ambitions in the region. But the following events promised to be difficult: two great powers were entering into a struggle that would become decisive for control of the Balkans."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 7,
+                                            Text = "Попереду чекала історична битва, яка визначала долю не тільки Святославової Русі, а й майбутнього впливу Візантії в Східній Європі.",
+                                            TextEng = "A historic battle lay ahead, which would determine the fate not only of Svyatoslav's Rus', but also of the future influence of Byzantium in Eastern Europe."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 8,
+                                            Text = "Святослав вирішив залишатися на Балканах, вважаючи, що відхід означав би втрату всього досягнутого. Він закріпився в Переяславці — ключовій фортеці, яка мала стратегічне значення для контролю над регіоном. Проте Візантія, використовуючи свою могутню армію та дипломатію, зуміла зібрати значні сили для наступу.",
+                                            TextEng = "Svyatoslav decided to remain in the Balkans, believing that leaving would mean losing everything he had achieved. He established himself in Pereyaslavtsi, a key fortress that was strategically important for controlling the region. However, Byzantium, using its powerful army and diplomacy, managed to gather significant forces for an offensive."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 9,
+                                            Text = "У 971 році імператор Іоанн Цимісхій особисто очолив похід проти Русі. Візантійці скористалися морською перевагою, відрізавши Русь від підкріплень із Києва. Святослав опинився в складній ситуації, коли його війська були змушені оборонятися проти переважаючих сил супротивника.",
+                                            TextEng = "In 971, Emperor John Tzimiskes personally led a campaign against Rus'. The Byzantines took advantage of their naval superiority, cutting off Rus' from reinforcements from Kyiv. Svyatoslav found himself in a difficult situation, with his troops forced to defend themselves against superior enemy forces."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 10,
+                                            Text = "Битви 971 року стали вирішальними. Найважливіше зіткнення відбулося біля Доростола, де Святослав і його дружина, оточені візантійцями, показали дивовижну стійкість і мужність. Попри численні втрати, князь уклав мир із Візантією, за яким йому дозволили повернутися до Києва за умови залишення Балкан.",
+                                            TextEng = "The battles of 971 were decisive. The most important clash took place near Dorostol, where Svyatoslav and his army, surrounded by the Byzantines, showed amazing resilience and courage. Despite numerous losses, the prince concluded peace with Byzantium, according to which he was allowed to return to Kiev on condition that he leave the Balkans."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 11,
+                                            Text = "Ця кампанія стала для Святослава фатальною. Виснажена армія вирушила назад, але по дорозі, у 972 році, князь загинув у засідці печенігів біля дніпровських порогів. Його смерть стала кінцем великої епохи завоювань, а Київська Русь знову зіткнулася з внутрішніми та зовнішніми викликами.",
+                                            TextEng = "This campaign was fatal for Svyatoslav. The exhausted army set off back, but on the way, in 972, the prince died in an ambush by the Pechenegs near the Dnieper rapids. His death marked the end of the great era of conquests, and Kievan Rus' again faced internal and external challenges."
+                                        }
+                                    },
+                                    End = new End()
+                                    {
+                                        Id = 0,
+                                        Name = "972",
+                                        Description = "Після смерті Святослава у 972 році Київська Русь увійшла в період внутрішніх чвар, що був зумовлений боротьбою за владу між його синами. Його старший син Ярополк отримав Київ, Олег — землі древлян, а молодший син Володимир, що був народжений від рабині Малуші, — Новгород.",
+                                        DescriptionEng = "After Svyatoslav's death in 972, Kievan Rus' entered a period of internal strife, caused by a power struggle between his sons. His eldest son Yaropolk received Kyiv, Oleg the lands of the Drevlyans, and his youngest son Vladimir, who was born to a slave girl, Malusha, Novgorod.",
+                                        Result = new List<Parametrs>()
+                                        {
+                                            new Parametrs()
+                                            {
+                                                Id = 0,
+                                                Name = "Скарбниця",
+                                                Description = "Скарбниця — це центральний елемент фінансової системи вашої держави чи цивілізації. Вона зберігає всі кошти, що належать вашій імперії, і є основним ресурсом для фінансування армій, будівництва споруд, розвитку економіки та здійснення торгових операцій. Чим більша та краще охороняється скарбниця, тим більше можливостей для зростання вашої держави. Управління скарбницею потребує стратегічного підходу, оскільки правильне розподілення фінансів може вплинути на стабільність і процвітання вашої держави, а помилки у фінансуванні можуть призвести до економічної кризи чи падіння.",
+                                                Value = -200
+                                            },
+                                            new Parametrs()
+                                            {
+                                                Id = 1,
+                                                Name = "Кількість нашої армії",
+                                                Description = "",
+                                                Value = 20000
+                                            },
+                                        }
+                                    }
+                                },
+                                new Turn()
+                                {
+                                    Id = 28,
+                                    Contents = new List<Content>
+                                    {
+                                        new Content()
+                                        {
+                                            Id = 0,
+                                            Text = "У 977 році між Ярополком та Олегом розпочалася міжусобна війна, яка завершилася загибеллю Олега. Володимир, побоюючись нападу Ярополка, втік за море, але згодом повернувся із варязькою дружиною, щоб відвоювати свою владу. До 980 року він здолав Ярополка та став єдиновладним князем Київської Русі.",
+                                            TextEng = "In 977, a civil war broke out between Yaropolk and Oleg, which ended with Oleg's death. Vladimir, fearing an attack from Yaropolk, fled overseas, but later returned with a Varangian army to regain his power. By 980, he had defeated Yaropolk and become the sole ruler of Kievan Rus'."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 1,
+                                            Text = "Володимир Великий почав правити в часи, коли Русь потребувала консолідації. Він провів реформу язичництва, спробувавши створити єдиний пантеон богів, але пізніше зрозумів, що язичницькі вірування не могли забезпечити політичної стабільності та єдності. Це призвело до його рішення прийняти християнство, що стало переломним моментом в історії Русі. Хрещення Володимира та його народу в 988 році зміцнило Русь як державу, інтегруючи її до кола християнських країн і забезпечивши духовну та культурну єдність.",
+                                            TextEng = "Vladimir the Great began his reign at a time when Rus was in need of consolidation. He reformed paganism, attempting to create a single pantheon of gods, but later realized that pagan beliefs could not provide political stability and unity. This led to his decision to convert to Christianity, which was a turning point in the history of Rus. The baptism of Vladimir and his people in 988 strengthened Rus as a state, integrating it into the circle of Christian countries and ensuring spiritual and cultural unity."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 2,
+                                            Text = "Дорогий княже Ярославе, Після смерті нашого батька Володимира Великого в 1015 році Русь опинилася в стані небаченого потрясіння. Святополк, твій старший брат, що сидів у Турові, оголосив себе спадкоємцем Київського престолу, хоча знав, що батько заповів владу Борису, улюбленому синові.",
+                                            TextEng = "Dear Prince Yaroslav, After the death of our father Vladimir the Great in 1015, Russia found itself in a state of unprecedented turmoil. Svyatopolk, your elder brother, who was sitting in Turov, declared himself heir to the Kiev throne, although he knew that his father had bequeathed power to Boris, his beloved son."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 3,
+                                            Text = "Святополк же вчинив страшне: зібравши своїх вірних, він найняв убивць, щоб ті позбавили життя Бориса, а згодом і Гліба. Їхня смерть стала жахливою плямою на історії нашої Русі. Святополк за це дістав ім’я \"Окаянний\", бо зрадив і сім’ю, і Божий закон.\r\n\r\nЗабравши Київ, Святополк почав правити залізною рукою, але влада його не була довгою. Адже ти, мудрий і справедливий, зібрав силу свою в Новгороді, шукаючи підтримки варягів, і виступив проти нього. Твій похід став неминучим, бо Русь не могла терпіти такого князя, що кров’ю родичів омив свій престол.",
+                                            TextEng = "Svyatopolk did a terrible thing: having gathered his faithful, he hired assassins to take the lives of Boris, and later Gleb. Their death became a terrible stain on the history of our Rus. For this, Svyatopolk received the name \"The Accursed\", because he betrayed both his family and God's law.\r\n\r\nHaving taken Kiev, Svyatopolk began to rule with an iron fist, but his power was not long. After all, you, wise and just, gathered your strength in Novgorod, seeking the support of the Varangians, and went against him. Your campaign became inevitable, because Rus could not tolerate such a prince who washed his throne with the blood of his relatives."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 4,
+                                            Text = "Святополк, знаючи про твій наступ, шукав союзників. Спершу звернувся до печенігів, а згодом до польського короля Болеслава Хороброго, намагаючись втримати Київ. Його війна з тобою була лютою: зради, битви та інтриги заполонили ці роки. Він двічі повертав собі Київ, але кожного разу ти змушував його тікати.",
+                                            TextEng = "Svyatopolk, knowing about your attack, was looking for allies. First he turned to the Pechenegs, and later to the Polish king Boleslav the Brave, trying to hold on to Kyiv. His war with you was fierce: betrayals, battles and intrigues filled these years. He twice regained Kyiv, but each time you forced him to flee."
+                                        },
+                                        new Content()
+                                        {
+                                            Id = 5,
                                             Text = "",
                                             TextEng = ""
                                         }

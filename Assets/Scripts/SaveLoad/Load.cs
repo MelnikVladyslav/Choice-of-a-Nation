@@ -1,39 +1,52 @@
 ﻿using Assets.Scripts.Clasess;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 
 namespace GameLogic.Functions.SaveLoad
 {
     public class Load
     {
-        public string urlStart = "Init/startGame.json";
-        public string urlGame = "Game/players.json";
+        private string urlStart => Path.Combine(Application.persistentDataPath, "Init", "startGame.json");
+        private string urlGame => Path.Combine(Application.persistentDataPath, "Game", "players.json");
 
         public Game LoadStartInfo()
         {
-            // Зчитування JSON з файлу
-            string jsonFromFile = File.ReadAllText(urlStart);
+            if (File.Exists(urlStart))
+            {
+                // Зчитування JSON з файлу
+                string jsonFromFile = File.ReadAllText(urlStart);
 
-            // Перетворення JSON у об'єкт
-            Game deserializedStartGame = JsonUtility.FromJson<Game>(jsonFromFile);
+                // Перетворення JSON у об'єкт
+                Game deserializedStartGame = JsonUtility.FromJson<Game>(jsonFromFile);
 
-            return deserializedStartGame;
+                Debug.Log($"Loaded Start Game data from: {urlStart}");
+                return deserializedStartGame;
+            }
+            else
+            {
+                Debug.LogWarning("Start Game file not found.");
+                return null;
+            }
         }
 
         public Game LoadPlayersInfo()
         {
-            // Зчитування JSON з файлу
-            string jsonFromFile = File.ReadAllText(urlGame);
+            if (File.Exists(urlGame))
+            {
+                // Зчитування JSON з файлу
+                string jsonFromFile = File.ReadAllText(urlGame);
 
-            // Перетворення JSON у об'єкт
-            Game deserializedPlayers = JsonUtility.FromJson<Game>(jsonFromFile);
+                // Перетворення JSON у об'єкт
+                Game deserializedPlayers = JsonUtility.FromJson<Game>(jsonFromFile);
 
-            return deserializedPlayers;
+                Debug.Log($"Loaded Player data from: {urlGame}");
+                return deserializedPlayers;
+            }
+            else
+            {
+                Debug.LogWarning("Players file not found.");
+                return null;
+            }
         }
     }
 }

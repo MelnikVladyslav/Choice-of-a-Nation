@@ -1161,6 +1161,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 6b5aa7571e651304b811746e26b55911, type: 3}
   - {fileID: 2800000, guid: d917e9fb1de07e249b0abb8de67a2303, type: 3}
   - {fileID: 2800000, guid: 6ac96d7b09ff7254789d7c0ed6b6684d, type: 3}
+  - {fileID: 2800000, guid: b9cfa2cc4e4736844b27d11e67e603e7, type: 3}
   OurLeadImg: {fileID: 2074867122}
   EnemyLeadImg: {fileID: 1797923540}
   OurDataTxt: {fileID: 748989487}
